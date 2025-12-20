@@ -1,0 +1,98 @@
+name: 自动更新订阅与节点优化版
+
+on:
+  schedule:
+    - cron: '30 21 * * *'   # 北京时间 6:00 = UTC 22:00（前一天）
+  workflow_dispatch:
+
+jobs:
+  update-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史记录，方便对比变化
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyYAML==6.0 requests httpx aiohttp
+          pip install python-telegram==0.0.1
+          pip install pyyaml
+
+      - name: 执行优化更新脚本
+        run: |
+          python update_optimized.py
+
+      - name: 生成 README.md
+        run: |
+          echo "# 节点订阅统计与下载" > README.md
+          echo "" >> README.md
+          echo "更新时间：\$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')" >> README.md
+          echo "" >> README.md
+          echo "## 节点统计" >> README.md
+          
+          # 读取统计信息
+          if [ -f "stats.txt" ]; then
+            cat stats.txt >> README.md
+          fi
+          
+          echo "" >> README.md
+          echo "## 有效节点文件" >> README.md
+          
+          # 列出有效节点文件
+          for file in active_*.txt active_*.yaml; do
+            if [ -s "\$file" ]; then
+              count=\$(wc -l < "\$file" 2>/dev/null || echo "0")
+              echo "- [\${file} (约 \${count} 个节点)](\$file)" >> README.md
+            fi
+          done
+          
+          echo "" >> README.md
+          echo "## 失效节点文件" >> README.md
+          echo "> 注意：失效节点文件中的链接需要手动处理" >> README.md
+          
+          # 列出失效节点文件
+          for file in expired_*.txt; do
+            if [ -s "\$file" ]; then
+              count=\$(wc -l < "\$file")
+              echo "- [\${file} (\${count} 个失效链接)](\$file)" >> README.md
+            fi
+          done
+          
+          echo "" >> README.md
+          echo "## 合并文件" >> README.md
+          
+          # 列出合并文件
+          for file in merged_*.txt merged_*.yaml; do
+            if [ -s "\$file" ]; then
+              echo "- [\${file}](\$file)" >> README.md
+            fi
+          done
+          
+          if [ -s "all.txt" ]; then
+            count=\$(wc -l < "all.txt")
+            echo "- [all.txt (\${count} 个所有节点)](all.txt)" >> README.md
+          fi
+
+      - name: 提交更新
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # 只添加相关文件
+          git add *.txt *.yaml README.md update*.py
+          
+          # 检查是否有变化
+          if git diff --cached --quiet; then
+            echo "没有检测到变化，跳过提交"
+          else
+            git commit -m "自动更新节点: \$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M')"
+            git push
+          fi
