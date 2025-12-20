@@ -81,9 +81,9 @@ jobs:
           echo "## 💾 合并文件" >> README.md
           
           # 列出合并文件
-          if [ -s "merged_all.txt" ]; then
-            count=$(wc -l < "merged_all.txt")
-            echo "- 📦 [merged_all.txt (${count} 个所有节点)](merged_all.txt)" >> README.md
+          if [ -s "all.txt" ]; then
+            count=$(wc -l < "all.txt")
+            echo "- 📦 [all.txt (${count} 个所有节点)](all.txt)" >> README.md
           fi
           
           echo "" >> README.md
