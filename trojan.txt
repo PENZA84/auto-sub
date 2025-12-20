@@ -1074,7 +1074,6 @@ trojan://e2722c0fb503f8a592436c12bce0509a@153.121.51.29:2890#12,13|美国|@ripao
 trojan://e2722c0fb503f8a592436c12bce0509a@202.181.103.235:4054#12,13|美国2|@ripaojiedian
 trojan://BxceQaOe@18.163.24.54:968#12,13|美国3|@ripaojiedian
 trojan://BxceQaOe@36.156.102.115:26876#🇨🇳_CN_中国->🇯🇵_JP_日本
-trojan://BxceQaOe@58.152.25.71:443?sni=t.me%25252Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
 trojan://7418004a-0ecd-41c0-a062-42bf966d3fb2@cf.0sm.com:443#🇺🇸_美国_18
 trojan://5a2c16f9@104.17.162.3:443#未知_63
 trojan://5a2c16f9@104.19.220.22:443#未知_65
@@ -1182,11 +1181,13 @@ trojan://a6ba0ada-cef1-3009-98dc-a1300ca76ed6@gy.58n.net:20303#🇩🇪 中转�
 trojan://a6ba0ada-cef1-3009-98dc-a1300ca76ed6@gy.58n.net:20304#🇩🇪 中转•德国304•GPT - 飞翔吧
 trojan://a6ba0ada-cef1-3009-98dc-a1300ca76ed6@gy.58n.net:20305#🇩🇪 中转•德国305•GPT - 飞翔吧
 trojan://a6ba0ada-cef1-3009-98dc-a1300ca76ed6@gy.58n.net:20306#🇩🇪 中转•德国306•GPT - 飞翔吧
-trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_6237386430666334
 trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_3637333934613738
-trojan://BxceQaOe@58.152.30.31:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_3930366130653834
 trojan://BxceQaOe@58.152.30.31:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_6631396437373338
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@cf.zhetengsha.eu.org:443#github.com/Ruk1ng001_3165323331306263
+trojan://BxceQaOe@58.152.30.31:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_3930366130653834
+trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_6237386430666334
+trojan://BxceQaOe@58.152.25.71:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_3534613737303965
+trojan://BxceQaOe@58.152.26.107:443#🟡_🇨🇳:🇭🇰_📶_github.com/Ruk1ng001_3635313934363431
+trojan://bb824a22-b7ce-427b-9ed6-1adf0751da02@107.174.82.102.sslip.io:443#github.com/Ruk1ng001_3735333032346464
 trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443#🇭🇰 香港3|@ripaojiedian
 trojan://BxceQaOe@58.152.25.71:443#🇭🇰 香港4|@ripaojiedian
 trojan://BxceQaOe@58.152.26.107:443#🇭🇰 香港5|@ripaojiedian
@@ -1294,6 +1295,7 @@ trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?security=tls&sni=www
 trojan://Aimer@167.68.4.199:2053?security=tls&sni=epge.muarua.filegear-sg.me&type=ws&host=epge.muarua.filegear-sg.me&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
 trojan://7418004a-0ecd-41c0-a062-42bf966d3fb2@cf.877774.xyz:443?security=tls&sni=guang.bgm2024.dpdns.org&type=ws&host=guang.bgm2024.dpdns.org&path=%2F#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
 trojan://t1k169n5zmvvwn96r9ft@146.70.90.195:57452/?type=tcp&security=tls&sni=api-yandex.maps.ru&allowInsecure=1#%F0%9F%87%AC%F0%9F%87%A7_GB_%E8%8B%B1%E5%9B%BD
+trojan://BxceQaOe@58.152.25.71:443?sni=t.me%25252Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
 trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?allowInsecure=0&sni=www.nintendogames.net#%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@58.152.25.71:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
 trojan://BxceQaOe@58.152.26.107:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF5%7C%40ripaojiedian
@@ -3309,11 +3311,13 @@ trojan://e2722c0fb503f8a592436c12bce0509a@160.16.204.136:2890?security=tls&sni=w
 trojan://e2722c0fb503f8a592436c12bce0509a@160.16.124.55:2890?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5JP-160.16.124.55-0419
 trojan://e2722c0fb503f8a592436c12bce0509a@160.16.136.130:2890?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5JP-160.16.136.130-5073
 trojan://e2722c0fb503f8a592436c12bce0509a@153.121.51.29:2890?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5JP-153.121.51.29-0911
-trojan://WlRJM01qSmpNR1ppTlRBelpqaGhOVGt5TkRNMll6RXlZbU5sTURVd09XRT1AMTEyLjExOC4xMTYuODo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfNjIzNzM4NjQzMDY2NjMzNA==
 trojan://WlRJM01qSmpNR1ppTlRBelpqaGhOVGt5TkRNMll6RXlZbU5sTURVd09XRT1AMTEyLjExOC4xMTYuODo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfMzYzNzMzMzkzNDYxMzczOA==
-trojan://UW5oalpWRmhUMlU9QDU4LjE1Mi4zMC4zMTo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfMzkzMDM2NjEzMDY1MzgzNA==
 trojan://UW5oalpWRmhUMlU9QDU4LjE1Mi4zMC4zMTo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfNjYzMTM5NjQzNzM3MzMzOA==
-trojan://T0Rka01XSm1aRFF0TlRjMFpTMDBZemsyTFdGa05ESXRNRFF5Tm1ZeU56UTJNV1ptQGNmLnpoZXRlbmdzaGEuZXUub3JnOjQ0Mz9uYW1lPWdpdGh1Yi5jb20vUnVrMW5nMDAxXzMxNjUzMjMzMzEzMDYyNjM=
+trojan://UW5oalpWRmhUMlU9QDU4LjE1Mi4zMC4zMTo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfMzkzMDM2NjEzMDY1MzgzNA==
+trojan://WlRJM01qSmpNR1ppTlRBelpqaGhOVGt5TkRNMll6RXlZbU5sTURVd09XRT1AMTEyLjExOC4xMTYuODo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfNjIzNzM4NjQzMDY2NjMzNA==
+trojan://UW5oalpWRmhUMlU9QDU4LjE1Mi4yNS43MTo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfMzUzNDYxMzczNzMwMzk2NQ==
+trojan://UW5oalpWRmhUMlU9QDU4LjE1Mi4yNi4xMDc6NDQzP25hbWU98J-foV_wn4eo8J-Hszrwn4et8J-HsF_wn5O2X2dpdGh1Yi5jb20vUnVrMW5nMDAxXzM2MzUzMTM5MzQzNjM0MzE=
+trojan://WW1JNE1qUmhNakl0WWpkalpTMDBNamRpTFRsbFpEWXRNV0ZrWmpBM05URmtZVEF5QDEwNy4xNzQuODIuMTAyLnNzbGlwLmlvOjQ0Mz9uYW1lPWdpdGh1Yi5jb20vUnVrMW5nMDAxXzM3MzUzMzMwMzIzNDY0NjQ=
 trojan://BxceQaOe@58.152.25.71:443#[Trojan] 🇭🇰 香港 电讯盈科有限公司
 trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?allowInsecure=0&sni=www.nintendogames.net#12%2C13%7C%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@58.152.25.71:443?allowInsecure=1&sni=t.me%2Fripaojiedian#12%2C13%7C%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
