@@ -22,9 +22,8 @@ jobs:
       - name: 安装依赖
         run: |
           python -m pip install --upgrade pip
-          pip install PyYAML==6.0 requests httpx aiohttp
-          pip install python-telegram==0.0.1
-          pip install pyyaml
+          pip install PyYAML==6.0 requests aiohttp httpx
+          # 修复了依赖安装
 
       - name: 执行优化更新脚本
         run: |
@@ -34,7 +33,7 @@ jobs:
         run: |
           echo "# 节点订阅统计与下载" > README.md
           echo "" >> README.md
-          echo "更新时间：\$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')" >> README.md
+          echo "更新时间：$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')" >> README.md
           echo "" >> README.md
           echo "## 节点统计" >> README.md
           
@@ -48,9 +47,9 @@ jobs:
           
           # 列出有效节点文件
           for file in active_*.txt active_*.yaml; do
-            if [ -s "\$file" ]; then
-              count=\$(wc -l < "\$file" 2>/dev/null || echo "0")
-              echo "- [\${file} (约 \${count} 个节点)](\$file)" >> README.md
+            if [ -s "$file" ]; then
+              count=$(wc -l < "$file" 2>/dev/null || echo "0")
+              echo "- [${file} (约 ${count} 个节点)]($file)" >> README.md
             fi
           done
           
@@ -60,9 +59,9 @@ jobs:
           
           # 列出失效节点文件
           for file in expired_*.txt; do
-            if [ -s "\$file" ]; then
-              count=\$(wc -l < "\$file")
-              echo "- [\${file} (\${count} 个失效链接)](\$file)" >> README.md
+            if [ -s "$file" ]; then
+              count=$(wc -l < "$file")
+              echo "- [${file} (${count} 个失效链接)]($file)" >> README.md
             fi
           done
           
@@ -71,14 +70,14 @@ jobs:
           
           # 列出合并文件
           for file in merged_*.txt merged_*.yaml; do
-            if [ -s "\$file" ]; then
-              echo "- [\${file}](\$file)" >> README.md
+            if [ -s "$file" ]; then
+              echo "- [${file}]($file)" >> README.md
             fi
           done
           
           if [ -s "all.txt" ]; then
-            count=\$(wc -l < "all.txt")
-            echo "- [all.txt (\${count} 个所有节点)](all.txt)" >> README.md
+            count=$(wc -l < "all.txt")
+            echo "- [all.txt (${count} 个所有节点)](all.txt)" >> README.md
           fi
 
       - name: 提交更新
@@ -87,12 +86,12 @@ jobs:
           git config --local user.name "GitHub Action"
           
           # 只添加相关文件
-          git add *.txt *.yaml README.md update*.py
+          git add *.txt *.yaml README.md update*.py stats.txt update.log
           
           # 检查是否有变化
           if git diff --cached --quiet; then
             echo "没有检测到变化，跳过提交"
           else
-            git commit -m "自动更新节点: \$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M')"
+            git commit -m "自动更新节点: $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M')"
             git push
           fi
