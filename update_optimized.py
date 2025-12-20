@@ -361,18 +361,14 @@ class NodeManager:
         logger.info(f"开始处理 {len(self.raw_urls)} 个订阅链接...")
         
         async with aiohttp.ClientSession() as session:
-            tasks = []
-            url_map = {}
-            
             # 创建所有任务
+            tasks = []
             for url in self.raw_urls:
                 task = asyncio.create_task(self.fetch_subscription(session, url))
-                tasks.append(task)
-                url_map[task] = url
+                tasks.append((task, url))
             
             # 处理结果
-            for task in asyncio.as_completed(tasks):
-                url = url_map[task]
+            for task, url in tasks:
                 try:
                     content = await task
                     
