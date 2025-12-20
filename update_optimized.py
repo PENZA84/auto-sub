@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 简化的节点订阅更新脚本
-支持多种协议，自动分离有效/失效节点
+支持多种协议，自动分离有效/失效节点，智能去重
 """
 
 import os
@@ -14,7 +14,7 @@ import base64
 import asyncio
 import aiohttp
 import requests
-from urllib.parse import urlparse, urljoin
+from urllib.parse import urlparse, urljoin, parse_qs
 from datetime import datetime
 from typing import List, Dict, Tuple, Set, Optional
 import logging
@@ -338,7 +338,11 @@ class NodeManager:
         if config.lower().startswith('tuic://'):
             return {'type': 'tuic', 'config': config}
         
-        # 10. 尝试解析为各种协议的base64
+        # 10. 解析 WireGuard
+        if '[interface]' in config.lower() or 'privatekey' in config.lower():
+            return {'type': 'wireguard', 'config': config}
+        
+        # 11. 尝试解析为各种协议的base64
         if len(config) > 50 and '://' not in config:
             # 可能是base64编码的vmess
             if config.count('.') > 2:  # 有多个点，可能是base64
@@ -351,6 +355,299 @@ class NodeManager:
                     pass
         
         return None
+    
+    def extract_node_info(self, config: str) -> Optional[Dict]:
+        """解析节点配置，提取关键信息用于去重"""
+        config = config.strip()
+        if not config:
+            return None
+        
+        try:
+            # 1. Shadowsocks (ss://)
+            if config.lower().startswith('ss://'):
+                # 格式: ss://base64@host:port#name
+                try:
+                    if '#' in config:
+                        base_config, name = config.split('#', 1)
+                    else:
+                        base_config, name = config, ''
+                    
+                    if '@' in base_config:
+                        encoded_part, server_part = base_config[5:].split('@', 1)
+                    else:
+                        # 可能是没有@的格式
+                        encoded_part = base_config[5:]
+                        server_part = ""
+                    
+                    # 解码base64部分
+                    try:
+                        padding = 4 - len(encoded_part) % 4
+                        if padding != 4:
+                            encoded_part += '=' * padding
+                        decoded = base64.b64decode(encoded_part).decode('utf-8', errors='ignore')
+                        if ':' in decoded:
+                            method = decoded.split(':')[0]
+                        else:
+                            method = 'unknown'
+                    except:
+                        method = 'unknown'
+                    
+                    # 提取服务器和端口
+                    if ':' in server_part:
+                        server = server_part.split(':')[0]
+                        port_part = server_part.split(':')[1]
+                        if '/' in port_part:
+                            port = port_part.split('/')[0]
+                        else:
+                            port = port_part
+                    else:
+                        server, port = 'unknown', '0'
+                    
+                    return {
+                        'type': 'ss',
+                        'server': server,
+                        'port': port,
+                        'method': method,
+                        'original': config
+                    }
+                except:
+                    return None
+            
+            # 2. VMess (vmess://)
+            elif config.lower().startswith('vmess://'):
+                # 格式: vmess://base64
+                encoded = config[8:]
+                try:
+                    padding = 4 - len(encoded) % 4
+                    if padding != 4:
+                        encoded += '=' * padding
+                    decoded = base64.b64decode(encoded).decode('utf-8', errors='ignore')
+                    data = json.loads(decoded)
+                    server = data.get('add', '')
+                    port = str(data.get('port', ''))
+                    uuid = data.get('id', '')
+                    if server and port and uuid:
+                        return {
+                            'type': 'vmess',
+                            'server': server,
+                            'port': port,
+                            'uuid': uuid,
+                            'original': config
+                        }
+                except:
+                    return None
+            
+            # 3. VLess (vless://)
+            elif config.lower().startswith('vless://'):
+                # 格式: vless://uuid@host:port?params#name
+                try:
+                    parts = config[8:].split('@', 1)
+                    if len(parts) == 2:
+                        uuid = parts[0]
+                        rest = parts[1]
+                        
+                        # 移除名称
+                        if '#' in rest:
+                            rest = rest.split('#')[0]
+                        
+                        # 移除参数
+                        if '?' in rest:
+                            server_port = rest.split('?')[0]
+                        else:
+                            server_port = rest
+                        
+                        if ':' in server_port:
+                            server = server_port.split(':')[0]
+                            port = server_port.split(':')[1]
+                        else:
+                            server, port = 'unknown', '0'
+                        
+                        return {
+                            'type': 'vless',
+                            'server': server,
+                            'port': port,
+                            'uuid': uuid,
+                            'original': config
+                        }
+                except:
+                    return None
+            
+            # 4. Trojan (trojan://)
+            elif config.lower().startswith('trojan://'):
+                # 格式: trojan://password@host:port?params#name
+                try:
+                    parts = config[9:].split('@', 1)
+                    if len(parts) == 2:
+                        password = parts[0]
+                        rest = parts[1]
+                        
+                        # 移除名称
+                        if '#' in rest:
+                            rest = rest.split('#')[0]
+                        
+                        # 移除参数
+                        if '?' in rest:
+                            server_port = rest.split('?')[0]
+                        else:
+                            server_port = rest
+                        
+                        if ':' in server_port:
+                            server = server_port.split(':')[0]
+                            port = server_port.split(':')[1]
+                        else:
+                            server, port = 'unknown', '0'
+                        
+                        return {
+                            'type': 'trojan',
+                            'server': server,
+                            'port': port,
+                            'password': password,
+                            'original': config
+                        }
+                except:
+                    return None
+            
+            # 5. ShadowsocksR (ssr://)
+            elif config.lower().startswith('ssr://'):
+                # 格式: ssr://base64
+                encoded = config[6:]
+                try:
+                    padding = 4 - len(encoded) % 4
+                    if padding != 4:
+                        encoded += '=' * padding
+                    decoded = base64.b64decode(encoded).decode('utf-8', errors='ignore')
+                    
+                    # SSR格式: server:port:protocol:method:obfs:base64(password)/?params
+                    if '/' in decoded:
+                        main_part = decoded.split('/')[0]
+                    else:
+                        main_part = decoded
+                    
+                    parts = main_part.split(':')
+                    if len(parts) >= 6:
+                        server = parts[0]
+                        port = parts[1]
+                        method = parts[3] if len(parts) > 3 else 'unknown'
+                        
+                        return {
+                            'type': 'ssr',
+                            'server': server,
+                            'port': port,
+                            'method': method,
+                            'original': config
+                        }
+                except:
+                    return None
+            
+            # 6. Hysteria
+            elif config.lower().startswith('hysteria://') or config.lower().startswith('hysteria2://'):
+                # 格式: hysteria://host:port?params#name
+                try:
+                    is_hysteria2 = config.lower().startswith('hysteria2://')
+                    prefix_len = 11 if is_hysteria2 else 10
+                    
+                    rest = config[prefix_len:]
+                    
+                    # 移除名称
+                    if '#' in rest:
+                        rest = rest.split('#')[0]
+                    
+                    # 移除参数
+                    if '?' in rest:
+                        server_port = rest.split('?')[0]
+                    else:
+                        server_port = rest
+                    
+                    if ':' in server_port:
+                        server = server_port.split(':')[0]
+                        port = server_port.split(':')[1]
+                    else:
+                        server, port = 'unknown', '0'
+                    
+                    return {
+                        'type': 'hysteria2' if is_hysteria2 else 'hysteria',
+                        'server': server,
+                        'port': port,
+                        'original': config
+                    }
+                except:
+                    return None
+            
+            # 7. TUIC
+            elif config.lower().startswith('tuic://'):
+                # 格式: tuic://uuid@host:port?params#name
+                try:
+                    parts = config[7:].split('@', 1)
+                    if len(parts) == 2:
+                        uuid = parts[0]
+                        rest = parts[1]
+                        
+                        # 移除名称
+                        if '#' in rest:
+                            rest = rest.split('#')[0]
+                        
+                        # 移除参数
+                        if '?' in rest:
+                            server_port = rest.split('?')[0]
+                        else:
+                            server_port = rest
+                        
+                        if ':' in server_port:
+                            server = server_port.split(':')[0]
+                            port = server_port.split(':')[1]
+                        else:
+                            server, port = 'unknown', '0'
+                        
+                        return {
+                            'type': 'tuic',
+                            'server': server,
+                            'port': port,
+                            'uuid': uuid,
+                            'original': config
+                        }
+                except:
+                    return None
+            
+            # 8. 订阅链接
+            elif config.startswith('http://') or config.startswith('https://'):
+                return None
+            
+        except Exception as e:
+            logger.debug(f"解析节点信息失败 {config[:50]}...: {e}")
+        
+        return None
+    
+    def deduplicate_nodes_by_server(self, nodes: List[str]) -> List[str]:
+        """基于服务器信息去重节点"""
+        seen = set()
+        unique_nodes = []
+        
+        for node in nodes:
+            node_info = self.extract_node_info(node)
+            if node_info:
+                # 创建去重键
+                if node_info['type'] in ['vmess', 'vless']:
+                    # 对于VMess/VLess，使用服务器+端口+uuid
+                    dedup_key = f"{node_info['type']}:{node_info['server'].lower()}:{node_info['port']}:{node_info.get('uuid', '').lower()}"
+                elif node_info['type'] in ['trojan', 'tuic']:
+                    # 对于Trojan/TUIC，使用服务器+端口+密码/uuid
+                    auth_key = node_info.get('password', '') or node_info.get('uuid', '')
+                    dedup_key = f"{node_info['type']}:{node_info['server'].lower()}:{node_info['port']}:{auth_key.lower()}"
+                elif node_info['type'] in ['ss', 'ssr']:
+                    # 对于SS/SSR，使用服务器+端口+加密方法
+                    dedup_key = f"{node_info['type']}:{node_info['server'].lower()}:{node_info['port']}:{node_info.get('method', '').lower()}"
+                else:
+                    # 其他协议，使用服务器+端口
+                    dedup_key = f"{node_info['type']}:{node_info['server'].lower()}:{node_info['port']}"
+                
+                if dedup_key not in seen:
+                    seen.add(dedup_key)
+                    unique_nodes.append(node)
+            else:
+                # 如果无法解析，保留原始节点
+                unique_nodes.append(node)
+        
+        return unique_nodes
     
     async def process_urls(self):
         """处理所有URL"""
@@ -404,18 +701,6 @@ class NodeManager:
                         self.active_urls.remove(url)
                     self.expired_urls.add(url)
     
-    def _format_protocol_stats(self, stats_lines):
-        """格式化协议统计信息"""
-        formatted = []
-        for line in stats_lines:
-            # 解析每一行，如 "[SS] 有效 11358 条"
-            if ']' in line:
-                # 提取协议名称和数量
-                protocol = line.split(']')[0][1:]  # 去掉 [ 和 ]
-                count = line.split('有效 ')[1].split(' 条')[0]
-                formatted.append(f"│ {protocol:<8} {count:>8} 条  │")
-        return "\n".join(formatted)
-    
     def save_results(self):
         """保存结果到文件"""
         # 保存有效订阅链接
@@ -434,41 +719,64 @@ class NodeManager:
         
         for protocol, nodes in self.nodes.items():
             if nodes:
-                # 去重
+                # 首先基于原始配置去重
                 unique_nodes = list(dict.fromkeys(nodes))
                 
-                # 保存节点 - 删除 active_ 前缀
+                # 然后基于服务器信息去重
+                if protocol in ['ss', 'ssr', 'vmess', 'vless', 'trojan', 'hysteria', 'hysteria2', 'tuic']:
+                    before_count = len(unique_nodes)
+                    unique_nodes = self.deduplicate_nodes_by_server(unique_nodes)
+                    after_count = len(unique_nodes)
+                    
+                    # 显示去重统计
+                    if before_count > after_count:
+                        removed = before_count - after_count
+                        percentage = (removed / before_count) * 100
+                        logger.info(f"[去重] {protocol.upper()}: {before_count} → {after_count} (移除 {removed} 个, {percentage:.1f}%)")
+                
+                count = len(unique_nodes)
+                total_nodes += count
+                
+                # 保存节点
                 filename = f"{protocol}.txt"
                 with open(filename, 'w', encoding='utf-8') as f:
                     for node in unique_nodes:
                         f.write(f"{node}\n")
                 
-                count = len(unique_nodes)
-                total_nodes += count
                 stats_lines.append(f"[{protocol.upper()}] 有效 {count} 条")
-                logger.info(f"[写入] {filename}: {count} 条")
+                logger.info(f"[写入] {filename}: {count} 条 (已去重)")
             else:
                 # 创建空文件以便统计
                 filename = f"{protocol}.txt"
                 with open(filename, 'w', encoding='utf-8') as f:
                     pass
         
-        # 保存合并文件 - 只保留一个 all.txt
+        # 保存合并文件 - 保存为 all.txt
         all_nodes = []
         for protocol, nodes in self.nodes.items():
             all_nodes.extend(nodes)
         
         if all_nodes:
-            all_nodes = list(dict.fromkeys(all_nodes))  # 去重
+            # 首先基于原始配置去重
+            all_nodes = list(dict.fromkeys(all_nodes))
             
-            # 只保存一个合并文件
+            # 然后基于服务器信息去重
+            before_all_count = len(all_nodes)
+            all_nodes = self.deduplicate_nodes_by_server(all_nodes)
+            all_count = len(all_nodes)
+            
+            # 显示合并去重统计
+            if before_all_count > all_count:
+                removed = before_all_count - all_count
+                percentage = (removed / before_all_count) * 100
+                logger.info(f"[合并去重] 总数: {before_all_count} → {all_count} (移除 {removed} 个, {percentage:.1f}%)")
+            
+            # 保存合并文件
             with open('all.txt', 'w', encoding='utf-8') as f:
                 for node in all_nodes:
                     f.write(f"{node}\n")
             
-            count = len(all_nodes)
-            
-            # 改进格式的统计信息
+            # 生成统计信息
             separator = "─" * 40
             stats_summary = f"""
 {separator}
@@ -476,13 +784,13 @@ class NodeManager:
 {separator}
 📈 有效订阅: {len(self.active_urls):<4} 条
 📉 失效订阅: {len(self.expired_urls):<4} 条
-📦 总节点数: {total_nodes:<6} 条
+📦 总节点数: {total_nodes:<6} 条 (已去重)
 {separator}
 📁 节点分布:
 {separator}
 {chr(10).join(stats_lines)}
 {separator}
-💾 合并文件: all.txt ({count} 条)
+💾 合并文件: all.txt ({all_count} 条, 已去重)
 {separator}
 """
         else:
@@ -527,4 +835,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
