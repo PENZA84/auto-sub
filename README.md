@@ -1,96 +1,34 @@
 # 节点订阅统计与下载
 
-更新时间：2025-12-20 05:41 CST
+更新时间：2025-12-20 21:19:11 CST
 
-## 节点统计：
-```
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt
-[警告] 下载失败：https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt
-[警告] 下载失败：https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt
-[警告] 下载失败：https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt
-[警告] 下载失败：https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt
-[警告] 下载失败：https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt
-[警告] 下载失败：https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt
-[警告] 下载失败：https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml  521 Server Error: <none> for url: https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml
-[警告] 下载失败：https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml  521 Server Error: <none> for url: https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml
-[警告] 下载失败：https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml  521 Server Error: <none> for url: https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2
-[警告] 下载失败：https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2  404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2
-[警告] 下载失败：https://aizaozao.com/s.php/gDy73LXW6O  HTTPSConnectionPool(host='aizaozao.com', port=443): Max retries exceeded with url: /s.php/gDy73LXW6O (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)')))
-[警告] 下载失败：https://aizaozao.com/s.php/gDy73LXW6O  HTTPSConnectionPool(host='aizaozao.com', port=443): Max retries exceeded with url: /s.php/gDy73LXW6O (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)')))
-[警告] 下载失败：https://aizaozao.com/s.php/gDy73LXW6O  HTTPSConnectionPool(host='aizaozao.com', port=443): Max retries exceeded with url: /s.php/gDy73LXW6O (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)')))
-[警告] 下载失败：https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false  HTTPSConnectionPool(host='api.2c.lol', port=443): Max retries exceeded with url: /sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.2c.lol', port=443) at 0x7fd994ab0990>, 'Connection to api.2c.lol timed out. (connect timeout=10)'))
-[警告] 下载失败：https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false  HTTPSConnectionPool(host='api.2c.lol', port=443): Max retries exceeded with url: /sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.2c.lol', port=443) at 0x7fd994ab2650>, 'Connection to api.2c.lol timed out. (connect timeout=10)'))
-[警告] 下载失败：https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false  HTTPSConnectionPool(host='api.2c.lol', port=443): Max retries exceeded with url: /sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.2c.lol', port=443) at 0x7fd9938c6690>, 'Connection to api.2c.lol timed out. (connect timeout=10)'))
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt
-[警告] 下载失败：https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt  404 Client Error: Not Found for url: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt
-[分组] 有效 77 条
-[分组] 失效 24 条
-[写入] ss.txt : 10957 条
-[写入] ssr.txt : 7 条
-[写入] vmess.txt : 9976 条
-[写入] vless.txt : 16537 条
-[写入] trojan.txt : 3730 条
-[写入] hysteria.txt : 4 条
-[写入] hysteria2.txt : 533 条
-[写入] tuic.txt : 0 条
-[写入] naive_https.txt : 0 条
-[写入] wireguard.txt : 0 条
-[写入] clash.yaml : 0 条
-[完成] all.txt : 41799 条
-```
+## 节点统计
+[分组] 有效订阅: 67 条
+[分组] 失效订阅: 20 条
+[统计] 总节点数: 41853 条
 
-## 下载链接：
-- [all.txt](./all.txt)
-- [hysteria.txt](./hysteria.txt)
-- [hysteria2.txt](./hysteria2.txt)
-- [log.txt](./log.txt)
-- [naive_https.txt](./naive_https.txt)
-- [ss.txt](./ss.txt)
-- [ssr.txt](./ssr.txt)
-- [sub.txt](./sub.txt)
-- [sub_invalid.txt](./sub_invalid.txt)
-- [sub_valid.txt](./sub_valid.txt)
-- [trojan.txt](./trojan.txt)
-- [tuic.txt](./tuic.txt)
-- [vless.txt](./vless.txt)
-- [vmess.txt](./vmess.txt)
-- [wireguard.txt](./wireguard.txt)
-- [clash.yaml](./clash.yaml)
+[SS] 有效 11358 条
+[SSR] 有效 8 条
+[VMESS] 有效 10012 条
+[VLESS] 有效 16869 条
+[TROJAN] 有效 3328 条
+[HYSTERIA] 有效 19 条
+[HYSTERIA2] 有效 259 条
+[完成] all.txt: 41853 条
+## 有效节点文件
+- [active_hysteria.txt (约 19 个节点)](active_hysteria.txt)
+- [active_hysteria2.txt (约 259 个节点)](active_hysteria2.txt)
+- [active_ss.txt (约 11358 个节点)](active_ss.txt)
+- [active_ssr.txt (约 8 个节点)](active_ssr.txt)
+- [active_subscriptions.txt (约 67 个节点)](active_subscriptions.txt)
+- [active_trojan.txt (约 3328 个节点)](active_trojan.txt)
+- [active_vless.txt (约 16869 个节点)](active_vless.txt)
+- [active_vmess.txt (约 10012 个节点)](active_vmess.txt)
+
+## 失效节点文件
+> 注意：失效节点文件中的链接需要手动处理
+- [expired_subscriptions.txt (20 个失效链接)](expired_subscriptions.txt)
+
+## 合并文件
+- [merged_all.txt](merged_all.txt)
+- [all.txt (41853 个所有节点)](all.txt)
