@@ -462,7 +462,7 @@ class NodeManager:
             all_nodes = list(dict.fromkeys(all_nodes))  # 去重
             
             # 只保存一个合并文件
-            with open('merged_all.txt', 'w', encoding='utf-8') as f:
+            with open('all.txt', 'w', encoding='utf-8') as f:
                 for node in all_nodes:
                     f.write(f"{node}\n")
             
