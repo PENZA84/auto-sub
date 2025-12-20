@@ -404,6 +404,18 @@ class NodeManager:
                         self.active_urls.remove(url)
                     self.expired_urls.add(url)
     
+    def _format_protocol_stats(self, stats_lines):
+        """格式化协议统计信息"""
+        formatted = []
+        for line in stats_lines:
+            # 解析每一行，如 "[SS] 有效 11358 条"
+            if ']' in line:
+                # 提取协议名称和数量
+                protocol = line.split(']')[0][1:]  # 去掉 [ 和 ]
+                count = line.split('有效 ')[1].split(' 条')[0]
+                formatted.append(f"│ {protocol:<8} {count:>8} 条  │")
+        return "\n".join(formatted)
+    
     def save_results(self):
         """保存结果到文件"""
         # 保存有效订阅链接
@@ -425,8 +437,8 @@ class NodeManager:
                 # 去重
                 unique_nodes = list(dict.fromkeys(nodes))
                 
-                # 保存节点
-                filename = f"active_{protocol}.txt"
+                # 保存节点 - 删除 active_ 前缀
+                filename = f"{protocol}.txt"
                 with open(filename, 'w', encoding='utf-8') as f:
                     for node in unique_nodes:
                         f.write(f"{node}\n")
@@ -437,11 +449,11 @@ class NodeManager:
                 logger.info(f"[写入] {filename}: {count} 条")
             else:
                 # 创建空文件以便统计
-                filename = f"active_{protocol}.txt"
+                filename = f"{protocol}.txt"
                 with open(filename, 'w', encoding='utf-8') as f:
                     pass
         
-        # 保存合并文件
+        # 保存合并文件 - 只保留一个 merged_all.txt
         all_nodes = []
         for protocol, nodes in self.nodes.items():
             all_nodes.extend(nodes)
@@ -449,34 +461,47 @@ class NodeManager:
         if all_nodes:
             all_nodes = list(dict.fromkeys(all_nodes))  # 去重
             
-            with open('all.txt', 'w', encoding='utf-8') as f:
-                for node in all_nodes:
-                    f.write(f"{node}\n")
-            
+            # 只保存一个合并文件
             with open('merged_all.txt', 'w', encoding='utf-8') as f:
                 for node in all_nodes:
                     f.write(f"{node}\n")
-        
-        # 生成统计信息
-        stats_text = "\n".join(stats_lines) if stats_lines else "暂无有效节点"
-        stats_summary = f"""[分组] 有效订阅: {len(self.active_urls)} 条
-[分组] 失效订阅: {len(self.expired_urls)} 条
-[统计] 总节点数: {total_nodes} 条
-
-{stats_text}
+            
+            merged_count = len(all_nodes)
+            
+            # 改进格式的统计信息
+            separator = "─" * 40
+            stats_summary = f"""
+{separator}
+📊 节点订阅统计
+{separator}
+📈 有效订阅: {len(self.active_urls):<4} 条
+📉 失效订阅: {len(self.expired_urls):<4} 条
+📦 总节点数: {total_nodes:<6} 条
+{separator}
+📁 节点分布:
+{separator}
+{chr(10).join(stats_lines)}
+{separator}
+💾 合并文件: merged_all.txt ({merged_count} 条)
+{separator}
 """
-        
-        if all_nodes:
-            stats_summary += f"[完成] all.txt: {len(all_nodes)} 条"
+        else:
+            stats_summary = f"""
+{separator}
+📊 节点订阅统计
+{separator}
+📈 有效订阅: {len(self.active_urls):<4} 条
+📉 失效订阅: {len(self.expired_urls):<4} 条
+📦 总节点数: 0 条
+{separator}
+⚠️ 未解析到任何有效节点
+{separator}
+"""
         
         with open('stats.txt', 'w', encoding='utf-8') as f:
             f.write(stats_summary)
         
-        print("\n" + "="*50)
-        print("节点更新统计:")
-        print("="*50)
         print(stats_summary)
-        print("="*50)
         logger.info(f"更新完成！有效订阅: {len(self.active_urls)}, 失效订阅: {len(self.expired_urls)}, 总节点: {total_nodes}")
 
 async def main():
@@ -488,7 +513,7 @@ async def main():
     
     if not manager.raw_urls:
         logger.warning("没有找到订阅链接，请在 subscriptions.txt 中添加链接")
-        print("请在 subscriptions.txt 文件中添加订阅链接")
+        print("⚠️ 请在 subscriptions.txt 文件中添加订阅链接")
         with open('subscriptions.txt', 'w', encoding='utf-8') as f:
             f.write("# 在此添加你的订阅链接，每行一个\n")
             f.write("# 例如：\n")
@@ -502,3 +527,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
