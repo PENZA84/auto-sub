@@ -1,0 +1,445 @@
+2025-12-20 13:49:59,213 - INFO - 开始更新节点订阅...
+2025-12-20 13:49:59,213 - INFO - 从 subscriptions.txt 加载了 101 个订阅链接
+2025-12-20 13:49:59,213 - INFO - 开始处理 101 个订阅链接...
+2025-12-20 13:49:59,371 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt
+2025-12-20 13:49:59,371 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt
+2025-12-20 13:49:59,388 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
+2025-12-20 13:49:59,418 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
+2025-12-20 13:49:59,419 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
+2025-12-20 13:49:59,419 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt
+2025-12-20 13:49:59,443 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt
+2025-12-20 13:49:59,443 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt
+2025-12-20 13:49:59,444 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt
+2025-12-20 13:49:59,444 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt
+2025-12-20 13:49:59,445 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt
+2025-12-20 13:49:59,447 - WARNING - URL返回内容过短: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc4.yaml
+2025-12-20 13:49:59,455 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2
+2025-12-20 13:49:59,460 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+2025-12-20 13:49:59,460 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+2025-12-20 13:49:59,460 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt
+2025-12-20 13:49:59,474 - WARNING - HTTP错误 404: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt
+2025-12-20 13:49:59,480 - INFO - 成功获取订阅: https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
+2025-12-20 13:49:59,480 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
+2025-12-20 13:49:59,511 - INFO - 从Clash配置中提取了 17 个节点
+2025-12-20 13:49:59,511 - INFO -   解析到 16 个 SS 节点
+2025-12-20 13:49:59,511 - INFO -   解析到 1 个 VLESS 节点
+2025-12-20 13:49:59,511 - INFO - 成功获取订阅: https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+2025-12-20 13:49:59,511 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+2025-12-20 13:50:00,074 - INFO - 从Clash配置中提取了 128 个节点
+2025-12-20 13:50:00,074 - INFO -   解析到 48 个 SS 节点
+2025-12-20 13:50:00,074 - INFO -   解析到 15 个 VMESS 节点
+2025-12-20 13:50:00,074 - INFO -   解析到 44 个 VLESS 节点
+2025-12-20 13:50:00,075 - INFO -   解析到 19 个 TROJAN 节点
+2025-12-20 13:50:00,075 - INFO -   解析到 2 个 HYSTERIA 节点
+2025-12-20 13:50:00,075 - INFO - 成功获取订阅: https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml
+2025-12-20 13:50:00,075 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml
+2025-12-20 13:50:00,134 - INFO - 从Clash配置中提取了 77 个节点
+2025-12-20 13:50:00,134 - INFO -   解析到 53 个 SS 节点
+2025-12-20 13:50:00,135 - INFO -   解析到 4 个 VMESS 节点
+2025-12-20 13:50:00,135 - INFO -   解析到 13 个 VLESS 节点
+2025-12-20 13:50:00,135 - INFO -   解析到 6 个 TROJAN 节点
+2025-12-20 13:50:00,135 - INFO -   解析到 1 个 HYSTERIA 节点
+2025-12-20 13:50:00,191 - INFO - 成功获取订阅: https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt
+2025-12-20 13:50:00,317 - INFO -   解析到 2279 个 SS 节点
+2025-12-20 13:50:00,318 - INFO -   解析到 775 个 VMESS 节点
+2025-12-20 13:50:00,321 - INFO -   解析到 7839 个 VLESS 节点
+2025-12-20 13:50:00,321 - INFO -   解析到 447 个 TROJAN 节点
+2025-12-20 13:50:00,321 - INFO - 成功获取订阅: https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml
+2025-12-20 13:50:00,321 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml
+2025-12-20 13:50:00,350 - INFO - 从Clash配置中提取了 30 个节点
+2025-12-20 13:50:00,351 - INFO -   解析到 2 个 SS 节点
+2025-12-20 13:50:00,351 - INFO -   解析到 27 个 VMESS 节点
+2025-12-20 13:50:00,351 - INFO -   解析到 1 个 HYSTERIA 节点
+2025-12-20 13:50:00,351 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc0.yaml
+2025-12-20 13:50:00,351 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc0.yaml
+2025-12-20 13:50:00,381 - INFO - 从Clash配置中提取了 29 个节点
+2025-12-20 13:50:00,381 - INFO -   解析到 2 个 SS 节点
+2025-12-20 13:50:00,381 - INFO -   解析到 6 个 VMESS 节点
+2025-12-20 13:50:00,381 - INFO -   解析到 19 个 VLESS 节点
+2025-12-20 13:50:00,382 - INFO -   解析到 2 个 HYSTERIA 节点
+2025-12-20 13:50:00,382 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc1.yaml
+2025-12-20 13:50:00,382 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc1.yaml
+2025-12-20 13:50:00,882 - INFO - 从Clash配置中提取了 76 个节点
+2025-12-20 13:50:00,883 - INFO -   解析到 28 个 SS 节点
+2025-12-20 13:50:00,883 - INFO -   解析到 48 个 VMESS 节点
+2025-12-20 13:50:00,883 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc2.yaml
+2025-12-20 13:50:00,883 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc2.yaml
+2025-12-20 13:50:01,049 - INFO - 从Clash配置中提取了 16 个节点
+2025-12-20 13:50:01,050 - INFO -   解析到 3 个 SS 节点
+2025-12-20 13:50:01,050 - INFO -   解析到 1 个 VMESS 节点
+2025-12-20 13:50:01,050 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:01,050 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc3.yaml
+2025-12-20 13:50:01,050 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc3.yaml
+2025-12-20 13:50:01,078 - INFO - 从Clash配置中提取了 30 个节点
+2025-12-20 13:50:01,078 - INFO -   解析到 2 个 SS 节点
+2025-12-20 13:50:01,078 - INFO -   解析到 27 个 VMESS 节点
+2025-12-20 13:50:01,078 - INFO -   解析到 1 个 HYSTERIA 节点
+2025-12-20 13:50:01,078 - WARNING - 订阅失效: https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/sc4.yaml
+2025-12-20 13:50:01,078 - INFO - 成功获取订阅: https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
+2025-12-20 13:50:01,078 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
+2025-12-20 13:50:01,240 - INFO - 从Clash配置中提取了 15 个节点
+2025-12-20 13:50:01,240 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:01,240 - INFO -   解析到 2 个 VMESS 节点
+2025-12-20 13:50:01,240 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:01,240 - INFO - 成功获取订阅: https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_yaml.yml
+2025-12-20 13:50:01,240 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_yaml.yml
+2025-12-20 13:50:04,117 - INFO - 从Clash配置中提取了 5138 个节点
+2025-12-20 13:50:04,123 - INFO -   解析到 2415 个 SS 节点
+2025-12-20 13:50:04,124 - INFO -   解析到 2167 个 VMESS 节点
+2025-12-20 13:50:04,124 - INFO -   解析到 556 个 TROJAN 节点
+2025-12-20 13:50:04,124 - INFO - 成功获取订阅: https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml
+2025-12-20 13:50:04,124 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml
+2025-12-20 13:50:04,223 - INFO - 从Clash配置中提取了 201 个节点
+2025-12-20 13:50:04,223 - INFO -   解析到 168 个 SS 节点
+2025-12-20 13:50:04,223 - INFO -   解析到 22 个 VMESS 节点
+2025-12-20 13:50:04,223 - INFO -   解析到 11 个 TROJAN 节点
+2025-12-20 13:50:04,223 - INFO - 成功获取订阅: https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml
+2025-12-20 13:50:04,223 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml
+2025-12-20 13:50:04,241 - INFO - 从Clash配置中提取了 26 个节点
+2025-12-20 13:50:04,241 - INFO -   解析到 11 个 SS 节点
+2025-12-20 13:50:04,241 - INFO -   解析到 15 个 VMESS 节点
+2025-12-20 13:50:04,241 - INFO - 成功获取订阅: https://raw.githubusercontent.com/leetomlee123/freenode/main/README.md
+2025-12-20 13:50:04,242 - WARNING -   警告: 未解析到任何节点，可能是格式不支持
+2025-12-20 13:50:04,242 - INFO - 成功获取订阅: https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
+2025-12-20 13:50:04,242 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
+2025-12-20 13:50:04,565 - INFO - 从Clash配置中提取了 17 个节点
+2025-12-20 13:50:04,565 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:04,565 - INFO -   解析到 4 个 VMESS 节点
+2025-12-20 13:50:04,565 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:04,565 - INFO - 成功获取订阅: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+2025-12-20 13:50:04,565 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+2025-12-20 13:50:04,577 - INFO - 从Clash配置中提取了 3 个节点
+2025-12-20 13:50:04,578 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:04,578 - INFO -   解析到 1 个 VMESS 节点
+2025-12-20 13:50:04,578 - INFO -   解析到 1 个 TROJAN 节点
+2025-12-20 13:50:04,578 - INFO - 成功获取订阅: https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
+2025-12-20 13:50:04,578 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
+2025-12-20 13:50:04,607 - INFO - 从Clash配置中提取了 17 个节点
+2025-12-20 13:50:04,608 - INFO -   解析到 16 个 SS 节点
+2025-12-20 13:50:04,608 - INFO -   解析到 1 个 VLESS 节点
+2025-12-20 13:50:04,608 - INFO - 成功获取订阅: https://raw.githubusercontent.com/mgit0001/test_clash/main/heima.txt
+2025-12-20 13:50:04,608 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/mgit0001/test_clash/main/heima.txt
+2025-12-20 13:50:04,609 - WARNING -   警告: 未解析到任何节点，可能是格式不支持
+2025-12-20 13:50:04,609 - WARNING - 订阅失效: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+2025-12-20 13:50:04,609 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+2025-12-20 13:50:04,610 - INFO -   解析到 5 个 VMESS 节点
+2025-12-20 13:50:04,610 - INFO -   解析到 1 个 TROJAN 节点
+2025-12-20 13:50:04,610 - INFO - 成功获取订阅: https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
+2025-12-20 13:50:04,610 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
+2025-12-20 13:50:04,623 - INFO - 从Clash配置中提取了 0 个节点
+2025-12-20 13:50:04,623 - WARNING -   警告: 未解析到任何节点，可能是格式不支持
+2025-12-20 13:50:04,623 - INFO - 成功获取订阅: https://raw.githubusercontent.com/free18/v2ray/main/c.yaml
+2025-12-20 13:50:04,623 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/free18/v2ray/main/c.yaml
+2025-12-20 13:50:04,898 - INFO - 从Clash配置中提取了 327 个节点
+2025-12-20 13:50:04,898 - INFO -   解析到 80 个 VMESS 节点
+2025-12-20 13:50:04,898 - INFO -   解析到 228 个 VLESS 节点
+2025-12-20 13:50:04,898 - INFO -   解析到 19 个 TROJAN 节点
+2025-12-20 13:50:04,898 - INFO - 成功获取订阅: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
+2025-12-20 13:50:04,898 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
+2025-12-20 13:50:05,235 - INFO - 从Clash配置中提取了 27 个节点
+2025-12-20 13:50:05,235 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:05,235 - INFO -   解析到 14 个 VMESS 节点
+2025-12-20 13:50:05,235 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:05,235 - INFO - 成功获取订阅: https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml
+2025-12-20 13:50:05,235 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml
+2025-12-20 13:50:05,677 - INFO - 从Clash配置中提取了 118 个节点
+2025-12-20 13:50:05,677 - INFO -   解析到 42 个 VMESS 节点
+2025-12-20 13:50:05,677 - INFO -   解析到 76 个 TROJAN 节点
+2025-12-20 13:50:05,677 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml
+2025-12-20 13:50:05,677 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml
+2025-12-20 13:50:05,744 - INFO - 从Clash配置中提取了 33 个节点
+2025-12-20 13:50:05,744 - INFO -   解析到 13 个 SS 节点
+2025-12-20 13:50:05,744 - INFO -   解析到 10 个 VMESS 节点
+2025-12-20 13:50:05,744 - INFO -   解析到 3 个 VLESS 节点
+2025-12-20 13:50:05,744 - INFO -   解析到 5 个 TROJAN 节点
+2025-12-20 13:50:05,744 - INFO -   解析到 2 个 HYSTERIA 节点
+2025-12-20 13:50:05,744 - INFO - 成功获取订阅: https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
+2025-12-20 13:50:05,744 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
+2025-12-20 13:50:05,904 - INFO - 从Clash配置中提取了 15 个节点
+2025-12-20 13:50:05,904 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:05,904 - INFO -   解析到 2 个 VMESS 节点
+2025-12-20 13:50:05,904 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:05,904 - INFO - 成功获取订阅: https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml
+2025-12-20 13:50:05,904 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml
+2025-12-20 13:50:05,963 - INFO - 从Clash配置中提取了 107 个节点
+2025-12-20 13:50:05,964 - INFO -   解析到 26 个 SS 节点
+2025-12-20 13:50:05,964 - INFO -   解析到 53 个 VMESS 节点
+2025-12-20 13:50:05,964 - INFO -   解析到 28 个 TROJAN 节点
+2025-12-20 13:50:05,964 - INFO - 成功获取订阅: https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray.txt
+2025-12-20 13:50:06,003 - INFO -   解析到 63 个 SS 节点
+2025-12-20 13:50:06,003 - INFO -   解析到 72 个 VMESS 节点
+2025-12-20 13:50:06,003 - INFO -   解析到 215 个 VLESS 节点
+2025-12-20 13:50:06,003 - INFO -   解析到 35 个 TROJAN 节点
+2025-12-20 13:50:06,003 - INFO -   解析到 4 个 HYSTERIA 节点
+2025-12-20 13:50:06,003 - INFO - 成功获取订阅: https://raw.githubusercontent.com/vxiaov/free_proxies/main/links.txt
+2025-12-20 13:50:06,004 - INFO -   解析到 5 个 SS 节点
+2025-12-20 13:50:06,004 - INFO -   解析到 5 个 VMESS 节点
+2025-12-20 13:50:06,004 - INFO - 成功获取订阅: https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray/v2rayshare.txt
+2025-12-20 13:50:06,007 - INFO -   解析到 5 个 SS 节点
+2025-12-20 13:50:06,007 - INFO -   解析到 5 个 VMESS 节点
+2025-12-20 13:50:06,007 - INFO -   解析到 11 个 VLESS 节点
+2025-12-20 13:50:06,007 - INFO -   解析到 3 个 TROJAN 节点
+2025-12-20 13:50:06,007 - INFO -   解析到 3 个 HYSTERIA 节点
+2025-12-20 13:50:06,007 - INFO - 成功获取订阅: https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml
+2025-12-20 13:50:06,007 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml
+2025-12-20 13:50:06,160 - INFO - 从Clash配置中提取了 182 个节点
+2025-12-20 13:50:06,161 - INFO -   解析到 8 个 VMESS 节点
+2025-12-20 13:50:06,161 - INFO -   解析到 167 个 VLESS 节点
+2025-12-20 13:50:06,161 - INFO -   解析到 7 个 TROJAN 节点
+2025-12-20 13:50:06,161 - INFO - 成功获取订阅: https://raw.githubusercontent.com/ts-sf/fly/main/clash
+2025-12-20 13:50:06,161 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/ts-sf/fly/main/clash
+2025-12-20 13:50:06,353 - INFO - 从Clash配置中提取了 47 个节点
+2025-12-20 13:50:06,353 - INFO -   解析到 17 个 SS 节点
+2025-12-20 13:50:06,353 - INFO -   解析到 9 个 VMESS 节点
+2025-12-20 13:50:06,353 - INFO -   解析到 21 个 TROJAN 节点
+2025-12-20 13:50:06,353 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt
+2025-12-20 13:50:06,368 - INFO -   解析到 16 个 SS 节点
+2025-12-20 13:50:06,369 - INFO -   解析到 74 个 VMESS 节点
+2025-12-20 13:50:06,369 - INFO -   解析到 15 个 VLESS 节点
+2025-12-20 13:50:06,369 - INFO -   解析到 3 个 TROJAN 节点
+2025-12-20 13:50:06,369 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/clashmeta.txt
+2025-12-20 13:50:06,369 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/clashmeta.txt
+2025-12-20 13:50:06,370 - WARNING -   警告: 未解析到任何节点，可能是格式不支持
+2025-12-20 13:50:06,370 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/ndnode.txt
+2025-12-20 13:50:06,371 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:06,371 - INFO -   解析到 2 个 VMESS 节点
+2025-12-20 13:50:06,371 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:06,371 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodev2ray.txt
+2025-12-20 13:50:06,373 - INFO -   解析到 15 个 SS 节点
+2025-12-20 13:50:06,373 - INFO -   解析到 2 个 VMESS 节点
+2025-12-20 13:50:06,373 - INFO -   解析到 3 个 VLESS 节点
+2025-12-20 13:50:06,373 - INFO -   解析到 1 个 TROJAN 节点
+2025-12-20 13:50:06,373 - INFO -   解析到 3 个 HYSTERIA 节点
+2025-12-20 13:50:06,373 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodefree.txt
+2025-12-20 13:50:06,376 - INFO -   解析到 5 个 SS 节点
+2025-12-20 13:50:06,376 - INFO -   解析到 5 个 VMESS 节点
+2025-12-20 13:50:06,376 - INFO -   解析到 11 个 VLESS 节点
+2025-12-20 13:50:06,376 - INFO -   解析到 3 个 TROJAN 节点
+2025-12-20 13:50:06,376 - INFO -   解析到 3 个 HYSTERIA 节点
+2025-12-20 13:50:06,376 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/v2rayshare.txt
+2025-12-20 13:50:06,378 - INFO -   解析到 5 个 SS 节点
+2025-12-20 13:50:06,378 - INFO -   解析到 5 个 VMESS 节点
+2025-12-20 13:50:06,379 - INFO -   解析到 11 个 VLESS 节点
+2025-12-20 13:50:06,379 - INFO -   解析到 3 个 TROJAN 节点
+2025-12-20 13:50:06,379 - INFO -   解析到 3 个 HYSTERIA 节点
+2025-12-20 13:50:06,379 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/wenode.txt
+2025-12-20 13:50:06,381 - INFO -   解析到 5 个 SS 节点
+2025-12-20 13:50:06,381 - INFO -   解析到 5 个 VMESS 节点
+2025-12-20 13:50:06,381 - INFO -   解析到 11 个 VLESS 节点
+2025-12-20 13:50:06,381 - INFO -   解析到 3 个 TROJAN 节点
+2025-12-20 13:50:06,381 - INFO -   解析到 3 个 HYSTERIA 节点
+2025-12-20 13:50:06,381 - WARNING - 订阅失效: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt
+2025-12-20 13:50:06,382 - WARNING - 订阅失效: https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt
+2025-12-20 13:50:06,382 - INFO - 成功获取订阅: https://raw.githubusercontent.com/acymz/AutoVPN/main/data/V2.txt
+2025-12-20 13:50:06,393 - INFO -   解析到 9 个 SS 节点
+2025-12-20 13:50:06,394 - INFO -   解析到 20 个 VMESS 节点
+2025-12-20 13:50:06,394 - INFO -   解析到 1 个 VLESS 节点
+2025-12-20 13:50:06,394 - INFO -   解析到 13 个 TROJAN 节点
+2025-12-20 13:50:06,394 - INFO -   解析到 130 个 HYSTERIA2 节点
+2025-12-20 13:50:06,394 - INFO - 成功获取订阅: https://raw.githubusercontent.com/peacefish/nodefree/main/sub/proxy_cf.yaml
+2025-12-20 13:50:06,394 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/peacefish/nodefree/main/sub/proxy_cf.yaml
+2025-12-20 13:50:06,715 - INFO - 从Clash配置中提取了 555 个节点
+2025-12-20 13:50:06,715 - INFO -   解析到 283 个 SS 节点
+2025-12-20 13:50:06,715 - INFO -   解析到 202 个 VMESS 节点
+2025-12-20 13:50:06,715 - INFO -   解析到 17 个 VLESS 节点
+2025-12-20 13:50:06,715 - INFO -   解析到 45 个 TROJAN 节点
+2025-12-20 13:50:06,715 - INFO -   解析到 6 个 HYSTERIA 节点
+2025-12-20 13:50:06,715 - WARNING - 订阅失效: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt
+2025-12-20 13:50:06,715 - INFO - 成功获取订阅: https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/utils/pool/output.yaml
+2025-12-20 13:50:06,716 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/utils/pool/output.yaml
+2025-12-20 13:50:09,727 - INFO - 从Clash配置中提取了 3727 个节点
+2025-12-20 13:50:09,733 - INFO -   解析到 1189 个 SS 节点
+2025-12-20 13:50:09,733 - INFO -   解析到 1694 个 VMESS 节点
+2025-12-20 13:50:09,734 - INFO -   解析到 844 个 TROJAN 节点
+2025-12-20 13:50:09,734 - INFO - 成功获取订阅: https://raw.githubusercontent.com/yorkLiu/FreeV2RayNode/main/v2ray.txt
+2025-12-20 13:50:09,739 - INFO -   解析到 50 个 VMESS 节点
+2025-12-20 13:50:09,739 - WARNING - 订阅失效: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt
+2025-12-20 13:50:09,739 - WARNING - 订阅失效: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
+2025-12-20 13:50:09,739 - WARNING - 订阅失效: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
+2025-12-20 13:50:09,739 - WARNING - 订阅失效: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt
+2025-12-20 13:50:09,739 - WARNING - 订阅失效: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
+2025-12-20 13:50:09,739 - INFO - 成功获取订阅: https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
+2025-12-20 13:50:09,739 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
+2025-12-20 13:50:12,915 - INFO - 从Clash配置中提取了 3643 个节点
+2025-12-20 13:50:12,920 - INFO -   解析到 1177 个 SS 节点
+2025-12-20 13:50:12,920 - INFO -   解析到 1660 个 VMESS 节点
+2025-12-20 13:50:12,920 - INFO -   解析到 806 个 TROJAN 节点
+2025-12-20 13:50:12,921 - INFO - 成功获取订阅: https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml
+2025-12-20 13:50:12,921 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml
+2025-12-20 13:50:12,987 - INFO - 从Clash配置中提取了 150 个节点
+2025-12-20 13:50:12,987 - INFO -   解析到 150 个 SS 节点
+2025-12-20 13:50:12,987 - INFO - 成功获取订阅: https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
+2025-12-20 13:50:13,344 - INFO -   解析到 2222 个 VMESS 节点
+2025-12-20 13:50:13,344 - INFO - 成功获取订阅: https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/TrinityBase
+2025-12-20 13:50:13,426 - INFO -   解析到 2029 个 SS 节点
+2025-12-20 13:50:13,426 - WARNING - 订阅失效: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt
+2025-12-20 13:50:13,426 - WARNING - 订阅失效: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt
+2025-12-20 13:50:13,426 - WARNING - 订阅失效: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt
+2025-12-20 13:50:13,426 - WARNING - 订阅失效: https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt
+2025-12-20 13:50:13,426 - INFO - 成功获取订阅: https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt
+2025-12-20 13:50:13,435 - INFO -   解析到 332 个 TROJAN 节点
+2025-12-20 13:50:13,435 - INFO - 成功获取订阅: https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt
+2025-12-20 13:50:13,443 - INFO -   解析到 1170 个 SS 节点
+2025-12-20 13:50:13,444 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Ruk1ng001/freeSub/refs/heads/main/v2ray
+2025-12-20 13:50:13,445 - INFO -   解析到 13 个 SS 节点
+2025-12-20 13:50:13,445 - INFO -   解析到 5 个 TROJAN 节点
+2025-12-20 13:50:13,451 - WARNING - 获取订阅失败 https://aizaozao.com/s.php/gDy73LXW6O: Cannot connect to host aizaozao.com:443 ssl:False [[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)]
+2025-12-20 13:50:13,451 - WARNING - URL返回内容过短: https://1122.yunjijd.xyz/api/v1/client/subscribe?token=44866289e789a00fa89bfc82c05ce528
+2025-12-20 13:50:13,452 - INFO - 成功获取订阅: https://www.xrayvip.com/free.txt
+2025-12-20 13:50:13,452 - INFO -   解析到 7 个 SS 节点
+2025-12-20 13:50:13,452 - INFO -   解析到 1 个 VMESS 节点
+2025-12-20 13:50:13,452 - INFO - 成功获取订阅: https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
+2025-12-20 13:50:13,453 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
+2025-12-20 13:50:13,784 - INFO - 从Clash配置中提取了 17 个节点
+2025-12-20 13:50:13,784 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:13,784 - INFO -   解析到 4 个 VMESS 节点
+2025-12-20 13:50:13,784 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:13,784 - INFO - 成功获取订阅: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+2025-12-20 13:50:13,784 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+2025-12-20 13:50:13,796 - INFO - 从Clash配置中提取了 3 个节点
+2025-12-20 13:50:13,796 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:13,796 - INFO -   解析到 1 个 VMESS 节点
+2025-12-20 13:50:13,797 - INFO -   解析到 1 个 TROJAN 节点
+2025-12-20 13:50:13,797 - INFO - 成功获取订阅: https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml
+2025-12-20 13:50:13,797 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml
+2025-12-20 13:50:13,814 - INFO - 从Clash配置中提取了 26 个节点
+2025-12-20 13:50:13,814 - INFO -   解析到 11 个 SS 节点
+2025-12-20 13:50:13,814 - INFO -   解析到 15 个 VMESS 节点
+2025-12-20 13:50:13,814 - INFO - 成功获取订阅: https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
+2025-12-20 13:50:13,814 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
+2025-12-20 13:50:13,977 - INFO - 从Clash配置中提取了 15 个节点
+2025-12-20 13:50:13,977 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:13,977 - INFO -   解析到 2 个 VMESS 节点
+2025-12-20 13:50:13,977 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:13,978 - INFO - 成功获取订阅: https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
+2025-12-20 13:50:13,978 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
+2025-12-20 13:50:14,006 - INFO - 从Clash配置中提取了 17 个节点
+2025-12-20 13:50:14,006 - INFO -   解析到 16 个 SS 节点
+2025-12-20 13:50:14,006 - INFO -   解析到 1 个 VLESS 节点
+2025-12-20 13:50:14,006 - INFO - 成功获取订阅: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
+2025-12-20 13:50:14,006 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
+2025-12-20 13:50:14,333 - INFO - 从Clash配置中提取了 27 个节点
+2025-12-20 13:50:14,333 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:14,333 - INFO -   解析到 14 个 VMESS 节点
+2025-12-20 13:50:14,333 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:14,333 - INFO - 成功获取订阅: https://raw.githubusercontent.com/Flikify/getNode/main/clash.yaml
+2025-12-20 13:50:14,333 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/Flikify/getNode/main/clash.yaml
+2025-12-20 13:50:14,394 - INFO - 从Clash配置中提取了 22 个节点
+2025-12-20 13:50:14,394 - INFO -   解析到 2 个 SS 节点
+2025-12-20 13:50:14,394 - INFO -   解析到 19 个 VMESS 节点
+2025-12-20 13:50:14,394 - INFO -   解析到 1 个 TROJAN 节点
+2025-12-20 13:50:14,394 - INFO - 成功获取订阅: https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt
+2025-12-20 13:50:14,404 - INFO -   解析到 2 个 SS 节点
+2025-12-20 13:50:14,404 - INFO -   解析到 4 个 VMESS 节点
+2025-12-20 13:50:14,404 - INFO -   解析到 1 个 VLESS 节点
+2025-12-20 13:50:14,404 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:14,404 - INFO -   解析到 129 个 HYSTERIA2 节点
+2025-12-20 13:50:14,407 - WARNING - HTTP错误 521: https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml
+2025-12-20 13:50:14,407 - WARNING - 订阅失效: https://fs.v2rayse.com/share/20241229/x6dbi93n54.yaml
+2025-12-20 13:50:14,407 - INFO - 成功获取订阅: https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/README.md
+2025-12-20 13:50:14,409 - INFO -   解析到 14 个 SS 节点
+2025-12-20 13:50:14,409 - INFO -   解析到 120 个 VLESS 节点
+2025-12-20 13:50:14,409 - INFO -   解析到 9 个 TROJAN 节点
+2025-12-20 13:50:14,409 - INFO - 成功获取订阅: https://raw.githubusercontent.com/shahidbhutta/Clash/refs/heads/main/Router
+2025-12-20 13:50:14,409 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/shahidbhutta/Clash/refs/heads/main/Router
+2025-12-20 13:50:14,454 - INFO - 从Clash配置中提取了 4 个节点
+2025-12-20 13:50:14,454 - INFO -   解析到 4 个 HYSTERIA 节点
+2025-12-20 13:50:14,454 - INFO - 成功获取订阅: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
+2025-12-20 13:50:14,455 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
+2025-12-20 13:50:14,851 - INFO - 从Clash配置中提取了 28 个节点
+2025-12-20 13:50:14,851 - INFO -   解析到 1 个 SS 节点
+2025-12-20 13:50:14,851 - INFO -   解析到 14 个 VMESS 节点
+2025-12-20 13:50:14,852 - INFO -   解析到 1 个 VLESS 节点
+2025-12-20 13:50:14,852 - INFO -   解析到 12 个 TROJAN 节点
+2025-12-20 13:50:14,852 - INFO - 成功获取订阅: https://raw.githubusercontent.com/anaer/Sub/refs/heads/main/clash.yaml
+2025-12-20 13:50:14,852 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/anaer/Sub/refs/heads/main/clash.yaml
+2025-12-20 13:50:14,873 - INFO - 从Clash配置中提取了 0 个节点
+2025-12-20 13:50:14,873 - WARNING -   警告: 未解析到任何节点，可能是格式不支持
+2025-12-20 13:50:14,873 - INFO - 成功获取订阅: https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml
+2025-12-20 13:50:14,873 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml
+2025-12-20 13:50:14,934 - INFO - 从Clash配置中提取了 22 个节点
+2025-12-20 13:50:14,934 - INFO -   解析到 2 个 SS 节点
+2025-12-20 13:50:14,934 - INFO -   解析到 19 个 VMESS 节点
+2025-12-20 13:50:14,934 - INFO -   解析到 1 个 TROJAN 节点
+2025-12-20 13:50:14,934 - INFO - 成功获取订阅: https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+2025-12-20 13:50:14,934 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+2025-12-20 13:50:15,201 - INFO - 从Clash配置中提取了 327 个节点
+2025-12-20 13:50:15,201 - INFO -   解析到 80 个 VMESS 节点
+2025-12-20 13:50:15,201 - INFO -   解析到 228 个 VLESS 节点
+2025-12-20 13:50:15,201 - INFO -   解析到 19 个 TROJAN 节点
+2025-12-20 13:50:15,201 - INFO - 成功获取订阅: https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml
+2025-12-20 13:50:15,202 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml
+2025-12-20 13:50:15,631 - INFO - 从Clash配置中提取了 118 个节点
+2025-12-20 13:50:15,631 - INFO -   解析到 42 个 VMESS 节点
+2025-12-20 13:50:15,631 - INFO -   解析到 76 个 TROJAN 节点
+2025-12-20 13:50:15,631 - INFO - 成功获取订阅: https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
+2025-12-20 13:50:15,631 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
+2025-12-20 13:50:15,660 - INFO - 从Clash配置中提取了 17 个节点
+2025-12-20 13:50:15,660 - INFO -   解析到 16 个 SS 节点
+2025-12-20 13:50:15,660 - INFO -   解析到 1 个 VLESS 节点
+2025-12-20 13:50:15,660 - WARNING - 订阅失效: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+2025-12-20 13:50:15,660 - WARNING - 订阅失效: https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2
+2025-12-20 13:50:15,660 - INFO - 成功获取订阅: https://raw.githubusercontent.com/mgit0001/test_clash/refs/heads/main/heima.txt
+2025-12-20 13:50:15,661 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/mgit0001/test_clash/refs/heads/main/heima.txt
+2025-12-20 13:50:15,662 - WARNING -   警告: 未解析到任何节点，可能是格式不支持
+2025-12-20 13:50:15,662 - INFO - 成功获取订阅: https://bujidao.cc/sub?key=I6MmA30LKRgZfVzgiDWcW3KFbN5BGxWL
+2025-12-20 13:50:15,663 - INFO -   解析到 5 个 VLESS 节点
+2025-12-20 13:50:16,987 - INFO - 成功获取订阅: https://file.uhsea.com/2501/2f1928c440325914dff2c1ffe0ccec4aR3.yaml
+2025-12-20 13:50:16,987 - INFO - 检测到Clash配置: https://file.uhsea.com/2501/2f1928c440325914dff2c1ffe0ccec4aR3.yaml
+2025-12-20 13:50:17,375 - INFO - 从Clash配置中提取了 21 个节点
+2025-12-20 13:50:17,375 - INFO -   解析到 10 个 SS 节点
+2025-12-20 13:50:17,375 - INFO -   解析到 11 个 VLESS 节点
+2025-12-20 13:50:17,375 - INFO - 成功获取订阅: https://file.uhsea.com/2501/295ccc51ad490cb731e8a95f9212b4f1BI.yaml
+2025-12-20 13:50:17,375 - INFO - 检测到Clash配置: https://file.uhsea.com/2501/295ccc51ad490cb731e8a95f9212b4f1BI.yaml
+2025-12-20 13:50:17,835 - INFO - 从Clash配置中提取了 161 个节点
+2025-12-20 13:50:17,835 - INFO -   解析到 101 个 SS 节点
+2025-12-20 13:50:17,835 - INFO -   解析到 3 个 VMESS 节点
+2025-12-20 13:50:17,836 - INFO -   解析到 42 个 VLESS 节点
+2025-12-20 13:50:17,836 - INFO -   解析到 15 个 TROJAN 节点
+2025-12-20 13:50:17,836 - INFO - 成功获取订阅: https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash
+2025-12-20 13:50:17,836 - INFO - 检测到Clash配置: https://flynb.site/sub?token=oLKUUBC7cJPmouRzlnw2bg&tag=clash
+2025-12-20 13:50:18,010 - INFO - 从Clash配置中提取了 1 个节点
+2025-12-20 13:50:18,010 - INFO -   解析到 1 个 TROJAN 节点
+2025-12-20 13:50:18,010 - WARNING - 订阅失效: https://aizaozao.com/s.php/gDy73LXW6O
+2025-12-20 13:50:18,010 - INFO - 成功获取订阅: https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false
+2025-12-20 13:50:18,010 - INFO - 检测到Clash配置: https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false
+2025-12-20 13:50:18,011 - ERROR - 解析Clash配置失败: expected '<document start>', but found '<block mapping start>'
+  in "<unicode string>", line 12, column 5:
+        color: rgb(0,0,0);
+        ^
+2025-12-20 13:50:18,011 - WARNING -   警告: 未解析到任何节点，可能是格式不支持
+2025-12-20 13:50:18,011 - INFO - 成功获取订阅: https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
+2025-12-20 13:50:18,011 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
+2025-12-20 13:50:21,231 - INFO - 从Clash配置中提取了 3643 个节点
+2025-12-20 13:50:21,237 - INFO -   解析到 1177 个 SS 节点
+2025-12-20 13:50:21,237 - INFO -   解析到 1660 个 VMESS 节点
+2025-12-20 13:50:21,237 - INFO -   解析到 806 个 TROJAN 节点
+2025-12-20 13:50:21,237 - INFO - 成功获取订阅: https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml
+2025-12-20 13:50:21,237 - INFO - 检测到Clash配置: https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml
+2025-12-20 13:50:21,307 - INFO - 从Clash配置中提取了 150 个节点
+2025-12-20 13:50:21,307 - INFO -   解析到 150 个 SS 节点
+2025-12-20 13:50:21,307 - INFO - 成功获取订阅: https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
+2025-12-20 13:50:21,648 - INFO -   解析到 2222 个 VMESS 节点
+2025-12-20 13:50:21,649 - INFO - 成功获取订阅: https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt
+2025-12-20 13:50:21,759 - INFO -   解析到 796 个 VMESS 节点
+2025-12-20 13:50:21,759 - INFO - 成功获取订阅: https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt
+2025-12-20 13:50:21,862 - INFO -   解析到 8137 个 VLESS 节点
+2025-12-20 13:50:21,862 - INFO - 成功获取订阅: https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt
+2025-12-20 13:50:21,871 - INFO -   解析到 332 个 TROJAN 节点
+2025-12-20 13:50:21,871 - INFO - 成功获取订阅: https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt
+2025-12-20 13:50:21,879 - INFO -   解析到 1170 个 SS 节点
+2025-12-20 13:50:21,879 - INFO - 成功获取订阅: https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ssr.txt
+2025-12-20 13:50:21,882 - INFO -   解析到 7 个 SSR 节点
+2025-12-20 13:50:21,882 - INFO - 成功获取订阅: https://raw.githubusercontent.com/iosDG001/_/refs/heads/main/SS
+2025-12-20 13:50:21,884 - INFO -   解析到 43 个 SS 节点
+2025-12-20 13:50:21,884 - WARNING - 订阅失效: https://1122.yunjijd.xyz/api/v1/client/subscribe?token=44866289e789a00fa89bfc82c05ce528
+2025-12-20 13:50:21,884 - WARNING - 订阅失效: https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/https.txt
+2025-12-20 13:50:21,893 - INFO - [写入] ss.txt: 11383 条
+2025-12-20 13:50:21,894 - INFO - [写入] ssr.txt: 7 条
+2025-12-20 13:50:21,900 - INFO - [写入] vmess.txt: 10059 条
+2025-12-20 13:50:21,918 - INFO - [写入] vless.txt: 16879 条
+2025-12-20 13:50:21,921 - INFO - [写入] trojan.txt: 3354 条
+2025-12-20 13:50:21,921 - INFO - [写入] hysteria.txt: 19 条
+2025-12-20 13:50:21,921 - INFO - [写入] hysteria2.txt: 259 条
+2025-12-20 13:50:21,954 - INFO - 更新完成！有效订阅: 68, 失效订阅: 19, 总节点: 41960
+2025-12-20 13:50:21,954 - INFO - 节点更新完成！
