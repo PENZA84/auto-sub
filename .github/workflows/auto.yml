@@ -33,60 +33,84 @@ jobs:
         run: |
           echo "# 节点订阅统计与下载" > README.md
           echo "" >> README.md
-          echo "更新时间：$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')" >> README.md
+          echo "📅 更新时间：$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')" >> README.md
           echo "" >> README.md
-          echo "## 节点统计" >> README.md
+          echo "## 📊 节点统计" >> README.md
           
           # 读取统计信息
           if [ -f "stats.txt" ]; then
+            echo '```' >> README.md
             cat stats.txt >> README.md
+            echo '```' >> README.md
+          else
+            echo "暂无统计信息" >> README.md
           fi
           
           echo "" >> README.md
-          echo "## 有效节点文件" >> README.md
+          echo "## 📁 有效节点文件" >> README.md
           
-          # 列出有效节点文件
-          for file in active_*.txt active_*.yaml; do
+          # 列出所有可能的协议文件
+          for protocol in ss ssr vmess vless trojan hysteria hysteria2 tuic wireguard clash; do
+            file="${protocol}.txt"
             if [ -s "$file" ]; then
               count=$(wc -l < "$file" 2>/dev/null || echo "0")
-              echo "- [${file} (约 ${count} 个节点)]($file)" >> README.md
+              echo "- 📄 [${protocol}.txt]($file) (约 ${count} 个节点)" >> README.md
+            fi
+          done
+          
+          # 列出YAML文件
+          for file in *.yaml *.yml; do
+            if [ -s "$file" ]; then
+              echo "- ⚙️ [${file}]($file)" >> README.md
             fi
           done
           
           echo "" >> README.md
-          echo "## 失效节点文件" >> README.md
+          echo "## ⚠️ 失效节点文件" >> README.md
           echo "> 注意：失效节点文件中的链接需要手动处理" >> README.md
           
           # 列出失效节点文件
           for file in expired_*.txt; do
             if [ -s "$file" ]; then
               count=$(wc -l < "$file")
-              echo "- [${file} (${count} 个失效链接)]($file)" >> README.md
+              echo "- ❌ [${file} (${count} 个失效链接)]($file)" >> README.md
             fi
           done
           
           echo "" >> README.md
-          echo "## 合并文件" >> README.md
+          echo "## 💾 合并文件" >> README.md
           
           # 列出合并文件
-          for file in merged_*.txt merged_*.yaml; do
-            if [ -s "$file" ]; then
-              echo "- [${file}]($file)" >> README.md
+          if [ -s "merged_all.txt" ]; then
+            count=$(wc -l < "merged_all.txt")
+            echo "- 📦 [merged_all.txt (${count} 个所有节点)](merged_all.txt)" >> README.md
+          fi
+          
+          echo "" >> README.md
+          echo "## 📂 其他文件" >> README.md
+          
+          # 列出其他重要文件
+          for file in active_subscriptions.txt update.log subscriptions.txt; do
+            if [ -f "$file" ]; then
+              echo "- 📄 [${file}]($file)" >> README.md
             fi
           done
           
-          if [ -s "all.txt" ]; then
-            count=$(wc -l < "all.txt")
-            echo "- [all.txt (${count} 个所有节点)](all.txt)" >> README.md
-          fi
+          echo "" >> README.md
+          echo "## 📋 使用方法" >> README.md
+          echo "" >> README.md
+          echo "1. 在 `subscriptions.txt` 中添加订阅链接" >> README.md
+          echo "2. 工作流会自动更新节点" >> README.md
+          echo "3. 下载需要的节点文件使用" >> README.md
+          echo "4. 失效链接会在 `expired_subscriptions.txt` 中" >> README.md
 
       - name: 提交更新
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          # 只添加相关文件
-          git add *.txt *.yaml README.md update*.py stats.txt update.log
+          # 添加所有相关文件
+          git add *.txt *.yaml *.yml README.md update*.py stats.txt update.log
           
           # 检查是否有变化
           if git diff --cached --quiet; then
