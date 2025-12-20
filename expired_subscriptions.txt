@@ -18,3 +18,4 @@ https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
 https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
 https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt
 https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
+https://raw.githubusercontent.com/ggborr/FREEE-VPN/refs/heads/main/6V2ray

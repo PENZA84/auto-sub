@@ -1291,10 +1291,7 @@ trojan://e2722c0fb503f8a592436c12bce0509a@202.181.103.235:4054#🇺🇸US美国1
 trojan://e2722c0fb503f8a592436c12bce0509a@202.181.103.235:2760#🇸🇬SG新加坡3
 trojan://e2722c0fb503f8a592436c12bce0509a@153.121.51.29:2890#🇺🇸US美国11 145.9KB/s
 trojan://BxceQaOe@18.163.24.54:968#🇺🇸US美国12
-trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?security=tls&sni=www.nintendogames.net&type=tcp&headerType=none#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
-trojan://Aimer@167.68.4.199:2053?security=tls&sni=epge.muarua.filegear-sg.me&type=ws&host=epge.muarua.filegear-sg.me&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
-trojan://7418004a-0ecd-41c0-a062-42bf966d3fb2@cf.877774.xyz:443?security=tls&sni=guang.bgm2024.dpdns.org&type=ws&host=guang.bgm2024.dpdns.org&path=%2F#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
-trojan://t1k169n5zmvvwn96r9ft@146.70.90.195:57452/?type=tcp&security=tls&sni=api-yandex.maps.ru&allowInsecure=1#%F0%9F%87%AC%F0%9F%87%A7_GB_%E8%8B%B1%E5%9B%BD
+trojan://2b1ed981-6547-4094-998b-06a3323d6f6c@xd-js.timiwc.com:21332#🇺🇸US_3 | ⬇️ 6.1MB/s|0%|Netflix
 trojan://BxceQaOe@58.152.25.71:443?sni=t.me%25252Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
 trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?allowInsecure=0&sni=www.nintendogames.net#%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@58.152.25.71:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
@@ -1308,6 +1305,10 @@ trojan://BxceQaOe@3.112.190.129:1196?allowInsecure=1&sni=t.me%252Fripaojiedian#%
 trojan://e2722c0fb503f8a592436c12bce0509a@153.121.51.29:2890?allowInsecure=0&sni=www.nintendogames.net#%E7%BE%8E%E5%9B%BD%7C%40ripaojiedian
 trojan://e2722c0fb503f8a592436c12bce0509a@202.181.103.235:4054?allowInsecure=1&sni=www.nintendogames.net#%E7%BE%8E%E5%9B%BD2%7C%40ripaojiedian
 trojan://BxceQaOe@18.163.24.54:968?allowInsecure=1&sni=t.me%2Fripaojiedian#%E7%BE%8E%E5%9B%BD3%7C%40ripaojiedian
+trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?security=tls&sni=www.nintendogames.net&type=tcp&headerType=none#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
+trojan://Aimer@167.68.4.199:2053?security=tls&sni=epge.muarua.filegear-sg.me&type=ws&host=epge.muarua.filegear-sg.me&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
+trojan://7418004a-0ecd-41c0-a062-42bf966d3fb2@cf.877774.xyz:443?security=tls&sni=guang.bgm2024.dpdns.org&type=ws&host=guang.bgm2024.dpdns.org&path=%2F#%E7%BE%8E%E5%9B%BD%28yudou6677.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
+trojan://t1k169n5zmvvwn96r9ft@146.70.90.195:57452/?type=tcp&security=tls&sni=api-yandex.maps.ru&allowInsecure=1#%F0%9F%87%AC%F0%9F%87%A7_GB_%E8%8B%B1%E5%9B%BD
 trojan://BxceQaOe@219.78.209.224:443#🇨🇳_CN_中国_1
 trojan://iwangjie@158.101.11.204:15805#🇺🇸_US_美国_3
 trojan://trojan@45.192.222.112:8443#🇨🇳_CN_中国_2
@@ -3318,7 +3319,6 @@ trojan://WlRJM01qSmpNR1ppTlRBelpqaGhOVGt5TkRNMll6RXlZbU5sTURVd09XRT1AMTEyLjExOC4
 trojan://UW5oalpWRmhUMlU9QDU4LjE1Mi4yNS43MTo0NDM_bmFtZT3wn5-hX_Cfh6jwn4ezOvCfh63wn4ewX_Cfk7ZfZ2l0aHViLmNvbS9SdWsxbmcwMDFfMzUzNDYxMzczNzMwMzk2NQ==
 trojan://UW5oalpWRmhUMlU9QDU4LjE1Mi4yNi4xMDc6NDQzP25hbWU98J-foV_wn4eo8J-Hszrwn4et8J-HsF_wn5O2X2dpdGh1Yi5jb20vUnVrMW5nMDAxXzM2MzUzMTM5MzQzNjM0MzE=
 trojan://WW1JNE1qUmhNakl0WWpkalpTMDBNamRpTFRsbFpEWXRNV0ZrWmpBM05URmtZVEF5QDEwNy4xNzQuODIuMTAyLnNzbGlwLmlvOjQ0Mz9uYW1lPWdpdGh1Yi5jb20vUnVrMW5nMDAxXzM3MzUzMzMwMzIzNDY0NjQ=
-trojan://BxceQaOe@58.152.25.71:443#[Trojan] 🇭🇰 香港 电讯盈科有限公司
 trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?allowInsecure=0&sni=www.nintendogames.net#12%2C13%7C%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@58.152.25.71:443?allowInsecure=1&sni=t.me%2Fripaojiedian#12%2C13%7C%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
 trojan://BxceQaOe@58.152.26.107:443?allowInsecure=1&sni=t.me%2Fripaojiedian#12%2C13%7C%E9%A6%99%E6%B8%AF5%7C%40ripaojiedian
@@ -3331,15 +3331,7 @@ trojan://BxceQaOe@3.112.190.129:1196?allowInsecure=1&sni=t.me%252Fripaojiedian#1
 trojan://e2722c0fb503f8a592436c12bce0509a@153.121.51.29:2890?allowInsecure=0&sni=www.nintendogames.net#12%2C13%7C%E7%BE%8E%E5%9B%BD%7C%40ripaojiedian
 trojan://e2722c0fb503f8a592436c12bce0509a@202.181.103.235:4054?allowInsecure=1&sni=www.nintendogames.net#12%2C13%7C%E7%BE%8E%E5%9B%BD2%7C%40ripaojiedian
 trojan://BxceQaOe@18.163.24.54:968?allowInsecure=1&sni=t.me%2Fripaojiedian#12%2C13%7C%E7%BE%8E%E5%9B%BD3%7C%40ripaojiedian
-trojan://telegram-id-privatevpns@3.76.178.121:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#DE%20TROJAN-01%20%7C%20free-nodes
-trojan://telegram-id-privatevpns@63.181.206.67:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#DE%20TROJAN-02%20%7C%20free-nodes
-trojan://BxceQaOe@58.152.26.107:443?allowInsecure=1&sni=t.me%2Fripaojiedian#HK%20TROJAN-29%20%7C%20free-nodes
-trojan://BxceQaOe@58.152.25.71:443?allowInsecure=1&sni=t.me%2Fripaojiedian#HK%20TROJAN-30%20%7C%20free-nodes
-trojan://telegram-id-privatevpns@15.236.119.43:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#FR%20TROJAN-37%20%7C%20free-nodes
-trojan://telegram-id-privatevpns@15.188.211.210:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#FR%20TROJAN-38%20%7C%20free-nodes
-trojan://OdgHycGphesfLmPMYolUF@172.238.229.254:14051?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=api.avito.ru#TR%20TROJAN-50%20%7C%20free-nodes
-trojan://e2722c0fb503f8a592436c12bce0509a@112.118.116.8:443?allowInsecure=0&sni=www.nintendogames.net#HK%20TROJAN-90%20%7C%20free-nodes
-trojan://BxceQaOe@58.152.30.31:443?sni=t.me%252Fripaojiedian#HK%20TROJAN-113%20%7C%20free-nodes
+trojan://BxceQaOe@58.152.25.71:443#[Trojan] 🇭🇰 香港 电讯盈科有限公司
 trojan://aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856@16.163.97.21:49782#🇯🇵 JP_176
 trojan://aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856@16.163.97.21:49089#🇯🇵 JP_177
 trojan://aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856@18.162.43.30:49089#🇯🇵 JP_178
