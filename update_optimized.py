@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-优化的节点订阅更新脚本
+简化的节点订阅更新脚本
 支持多种协议，自动分离有效/失效节点
 """
 
@@ -60,25 +60,52 @@ class NodeManager:
         """异步获取订阅内容"""
         try:
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive',
             }
             timeout = aiohttp.ClientTimeout(total=30)
             
-            async with session.get(url, headers=headers, timeout=timeout) as response:
+            async with session.get(url, headers=headers, timeout=timeout, ssl=False) as response:
                 if response.status == 200:
-                    content = await response.text()
+                    content_type = response.headers.get('Content-Type', '').lower()
+                    
+                    # 根据不同的内容类型处理
+                    if 'application/octet-stream' in content_type or 'text/plain' in content_type:
+                        content = await response.text()
+                    else:
+                        # 尝试按二进制读取，然后解码
+                        content_bytes = await response.read()
+                        try:
+                            # 尝试UTF-8解码
+                            content = content_bytes.decode('utf-8')
+                        except UnicodeDecodeError:
+                            try:
+                                # 尝试其他编码
+                                content = content_bytes.decode('gbk')
+                            except:
+                                # 如果都失败，使用原始字节
+                                content = str(content_bytes)
                     
                     # 检查内容是否有效
                     if not content or len(content.strip()) < 10:
                         logger.warning(f"URL返回内容过短: {url}")
                         return None
                     
-                    # 检查是否是base64编码
-                    if self.is_base64(content):
+                    # 检查并处理base64编码
+                    cleaned_content = content.strip()
+                    if self.is_base64(cleaned_content):
                         try:
-                            content = base64.b64decode(content).decode('utf-8')
-                        except:
-                            pass
+                            # 添加padding
+                            padding = 4 - len(cleaned_content) % 4
+                            if padding != 4:
+                                cleaned_content += '=' * padding
+                            decoded = base64.b64decode(cleaned_content)
+                            content = decoded.decode('utf-8', errors='ignore')
+                        except Exception as e:
+                            logger.debug(f"Base64解码失败，使用原始内容: {e}")
                     
                     return content
                 else:
@@ -94,48 +121,197 @@ class NodeManager:
     
     def is_base64(self, s: str) -> bool:
         """检查字符串是否是base64编码"""
-        try:
-            if len(s) % 4 != 0:
-                return False
-            if not re.match(r'^[A-Za-z0-9+/]*={0,2}$', s):
-                return False
-            base64.b64decode(s)
-            return True
-        except:
+        s = s.strip()
+        if len(s) < 20:  # 太短的字符串不可能是base64节点列表
             return False
-    
-    def parse_content(self, content: str) -> Dict[str, List[str]]:
-        """解析订阅内容，识别各种协议"""
-        result = {
-            'ss': [], 'ssr': [], 'vmess': [], 'vless': [], 
-            'trojan': [], 'hysteria': [], 'hysteria2': [],
-            'tuic': [], 'wireguard': [], 'clash': []
-        }
         
+        # 移除可能的URL安全base64字符
+        s = s.replace('-', '+').replace('_', '/')
+        
+        # 检查base64特征
+        pattern = r'^[A-Za-z0-9+/]+={0,2}$'
+        if not re.match(pattern, s):
+            return False
+        
+        # 检查长度是否为4的倍数
+        if len(s) % 4 != 0:
+            return False
+            
+        return True
+    
+    def parse_content(self, content: str, url: str) -> Dict[str, List[str]]:
+        """解析订阅内容，识别各种协议"""
+        result = {key: [] for key in self.nodes.keys()}
+        
+        # 先尝试解析为Clash配置
+        if self.is_clash_config(content, url):
+            logger.info(f"检测到Clash配置: {url}")
+            clash_nodes = self.extract_clash_nodes(content, url)
+            if clash_nodes:
+                for node_type, nodes in clash_nodes.items():
+                    if node_type in result:
+                        result[node_type].extend(nodes)
+                return result
+        
+        # 按行处理
         lines = [line.strip() for line in content.splitlines() if line.strip()]
         
         for line in lines:
             # 尝试解析为各种协议
-            node = self.parse_node(line)
-            if node:
-                result[node['type']].append(node['config'])
+            node_info = self.parse_node(line)
+            if node_info:
+                result[node_info['type']].append(node_info['config'])
+            else:
+                # 如果不是标准格式，尝试base64解码
+                if self.is_base64(line):
+                    try:
+                        decoded = base64.b64decode(line + '=' * (-len(line) % 4))
+                        decoded_str = decoded.decode('utf-8', errors='ignore')
+                        decoded_lines = decoded_str.split('\n')
+                        for decoded_line in decoded_lines:
+                            decoded_line = decoded_line.strip()
+                            if decoded_line:
+                                node_info = self.parse_node(decoded_line)
+                                if node_info:
+                                    result[node_info['type']].append(node_info['config'])
+                    except:
+                        pass
+        
+        return result
+    
+    def is_clash_config(self, content: str, url: str) -> bool:
+        """检查是否是Clash配置"""
+        # 检查URL是否包含clash关键词
+        url_lower = url.lower()
+        if 'clash' in url_lower or 'yaml' in url_lower or 'yml' in url_lower:
+            return True
+        
+        # 检查内容是否包含Clash关键词
+        content_lower = content.lower()
+        if 'proxies:' in content_lower or 'proxy-groups:' in content_lower or 'rules:' in content_lower:
+            return True
+        
+        # 尝试解析为YAML
+        try:
+            data = yaml.safe_load(content)
+            if isinstance(data, dict) and ('proxies' in data or 'Proxy' in data):
+                return True
+        except:
+            pass
+        
+        return False
+    
+    def extract_clash_nodes(self, content: str, url: str) -> Dict[str, List[str]]:
+        """从Clash配置中提取节点"""
+        result = {key: [] for key in self.nodes.keys()}
+        
+        try:
+            # 尝试解析YAML
+            data = yaml.safe_load(content)
+            if not isinstance(data, dict):
+                return result
+            
+            # 获取代理列表
+            proxies = data.get('proxies') or data.get('Proxy') or []
+            if not isinstance(proxies, list):
+                return result
+            
+            for proxy in proxies:
+                if not isinstance(proxy, dict):
+                    continue
+                    
+                proxy_type = str(proxy.get('type', '')).lower()
+                name = proxy.get('name', '')
+                server = proxy.get('server', '')
+                port = proxy.get('port', '')
+                
+                if not server or not port:
+                    continue
+                
+                # 根据类型生成对应的链接
+                if proxy_type == 'ss':
+                    # shadowsocks格式: ss://method:password@server:port#name
+                    password = proxy.get('password', '')
+                    cipher = proxy.get('cipher', '')
+                    if password and cipher and server and port:
+                        encoded = base64.b64encode(f"{cipher}:{password}".encode()).decode()
+                        node_url = f"ss://{encoded}@{server}:{port}#{name}"
+                        result['ss'].append(node_url)
+                
+                elif proxy_type == 'vmess':
+                    # vmess格式
+                    uuid = proxy.get('uuid', '')
+                    if uuid and server and port:
+                        config = {
+                            "v": "2",
+                            "ps": name,
+                            "add": server,
+                            "port": port,
+                            "id": uuid,
+                            "aid": proxy.get('alterId', 0),
+                            "scy": proxy.get('cipher', 'auto'),
+                            "net": proxy.get('network', 'tcp'),
+                            "type": proxy.get('type', 'none'),
+                            "host": proxy.get('servername', '') or proxy.get('host', ''),
+                            "path": proxy.get('path', ''),
+                            "tls": proxy.get('tls', ''),
+                            "sni": proxy.get('sni', '')
+                        }
+                        config_str = json.dumps(config, ensure_ascii=False, separators=(',', ':'))
+                        encoded = base64.b64encode(config_str.encode()).decode()
+                        node_url = f"vmess://{encoded}"
+                        result['vmess'].append(node_url)
+                
+                elif proxy_type == 'trojan':
+                    # trojan格式: trojan://password@server:port#name
+                    password = proxy.get('password', '')
+                    if password and server and port:
+                        node_url = f"trojan://{password}@{server}:{port}#{name}"
+                        result['trojan'].append(node_url)
+                
+                elif proxy_type == 'vless':
+                    # vless格式
+                    uuid = proxy.get('uuid', '')
+                    if uuid and server and port:
+                        node_url = f"vless://{uuid}@{server}:{port}?type={proxy.get('network', 'tcp')}#{name}"
+                        result['vless'].append(node_url)
+                
+                elif proxy_type == 'hysteria':
+                    # hysteria格式
+                    node_url = f"hysteria://{server}:{port}?protocol={proxy.get('protocol', 'udp')}#{name}"
+                    result['hysteria'].append(node_url)
+                
+                elif proxy_type == 'tuic':
+                    # tuic格式
+                    uuid = proxy.get('uuid', '') or proxy.get('password', '')
+                    if uuid and server and port:
+                        node_url = f"tuic://{uuid}@{server}:{port}#{name}"
+                        result['tuic'].append(node_url)
+            
+            logger.info(f"从Clash配置中提取了 {sum(len(v) for v in result.values())} 个节点")
+            
+        except Exception as e:
+            logger.error(f"解析Clash配置失败: {e}")
         
         return result
     
     def parse_node(self, config: str) -> Optional[Dict]:
         """解析单个节点配置"""
         config = config.strip()
+        if not config:
+            return None
         
-        # 1. 解析 Clash 配置
+        # 1. 解析 Clash 配置URL
         if config.startswith('http://') or config.startswith('https://'):
-            return {'type': 'clash', 'config': config}
+            if 'clash' in config.lower() or 'yaml' in config.lower() or 'yml' in config.lower():
+                return {'type': 'clash', 'config': config}
         
         # 2. 解析 Shadowsocks (ss://)
-        if config.startswith('ss://'):
+        if config.lower().startswith('ss://'):
             return {'type': 'ss', 'config': config}
         
         # 3. 解析 ShadowsocksR (ssr://)
-        if config.startswith('ssr://'):
+        if config.lower().startswith('ssr://'):
             return {'type': 'ssr', 'config': config}
         
         # 4. 解析 VMess (vmess://)
@@ -151,31 +327,39 @@ class NodeManager:
             return {'type': 'trojan', 'config': config}
         
         # 7. 解析 Hysteria
-        if 'hysteria://' in config.lower():
-            if 'hysteria2://' in config.lower():
-                return {'type': 'hysteria2', 'config': config}
+        if config.lower().startswith('hysteria://'):
             return {'type': 'hysteria', 'config': config}
         
-        # 8. 解析 TUIC
+        # 8. 解析 Hysteria2
+        if config.lower().startswith('hysteria2://'):
+            return {'type': 'hysteria2', 'config': config}
+        
+        # 9. 解析 TUIC
         if config.lower().startswith('tuic://'):
             return {'type': 'tuic', 'config': config}
         
-        # 9. 解析 WireGuard
-        if '[interface]' in config.lower() or 'privatekey' in config.lower():
-            return {'type': 'wireguard', 'config': config}
-        
-        # 10. 尝试解析为 base64 编码的 JSON (Clash 配置)
-        try:
-            decoded = base64.b64decode(config + '=' * (-len(config) % 4)).decode('utf-8')
-            if 'proxies:' in decoded or 'Proxy:' in decoded or 'proxy-groups:' in decoded:
-                return {'type': 'clash', 'config': config}
-        except:
-            pass
+        # 10. 尝试解析为各种协议的base64
+        if len(config) > 50 and '://' not in config:
+            # 可能是base64编码的vmess
+            if config.count('.') > 2:  # 有多个点，可能是base64
+                try:
+                    decoded = base64.b64decode(config + '=' * (-len(config) % 4))
+                    decoded_str = decoded.decode('utf-8', errors='ignore')
+                    if 'vmess://' in decoded_str.lower():
+                        return {'type': 'vmess', 'config': config}
+                except:
+                    pass
         
         return None
     
     async def process_urls(self):
         """处理所有URL"""
+        if not self.raw_urls:
+            logger.warning("没有找到订阅链接")
+            return
+        
+        logger.info(f"开始处理 {len(self.raw_urls)} 个订阅链接...")
+        
         async with aiohttp.ClientSession() as session:
             tasks = []
             url_map = {}
@@ -193,16 +377,24 @@ class NodeManager:
                     content = await task
                     
                     if content:
+                        logger.info(f"成功获取订阅: {url}")
                         self.active_urls.add(url)
                         if url in self.expired_urls:
                             self.expired_urls.remove(url)
+                            logger.info(f"从失效列表中移除: {url}")
                         
                         # 解析内容
-                        parsed = self.parse_content(content)
+                        parsed = self.parse_content(content, url)
+                        node_count = 0
                         for protocol, nodes in parsed.items():
                             if nodes:
-                                self.nodes[protocol].extend(nodes)
-                                logger.info(f"从 {url} 解析到 {len(nodes)} 个 {protocol.upper()} 节点")
+                                unique_nodes = list(dict.fromkeys(nodes))  # 去重
+                                self.nodes[protocol].extend(unique_nodes)
+                                node_count += len(unique_nodes)
+                                logger.info(f"  解析到 {len(unique_nodes)} 个 {protocol.upper()} 节点")
+                        
+                        if node_count == 0:
+                            logger.warning(f"  警告: 未解析到任何节点，可能是格式不支持")
                     
                     else:
                         logger.warning(f"订阅失效: {url}")
@@ -230,7 +422,7 @@ class NodeManager:
         
         # 按协议保存节点
         total_nodes = 0
-        stats = []
+        stats_lines = []
         
         for protocol, nodes in self.nodes.items():
             if nodes:
@@ -245,8 +437,13 @@ class NodeManager:
                 
                 count = len(unique_nodes)
                 total_nodes += count
-                stats.append(f"[{protocol.upper()}] 有效 {count} 条")
+                stats_lines.append(f"[{protocol.upper()}] 有效 {count} 条")
                 logger.info(f"[写入] {filename}: {count} 条")
+            else:
+                # 创建空文件以便统计
+                filename = f"active_{protocol}.txt"
+                with open(filename, 'w', encoding='utf-8') as f:
+                    pass
         
         # 保存合并文件
         all_nodes = []
@@ -254,7 +451,8 @@ class NodeManager:
             all_nodes.extend(nodes)
         
         if all_nodes:
-            all_nodes = list(dict.fromkeys(all_nodes))
+            all_nodes = list(dict.fromkeys(all_nodes))  # 去重
+            
             with open('all.txt', 'w', encoding='utf-8') as f:
                 for node in all_nodes:
                     f.write(f"{node}\n")
@@ -262,82 +460,28 @@ class NodeManager:
             with open('merged_all.txt', 'w', encoding='utf-8') as f:
                 for node in all_nodes:
                     f.write(f"{node}\n")
-            
-            # 生成Clash配置
-            self.generate_clash_config(all_nodes)
         
         # 生成统计信息
-        stats_text = "\n".join(stats)
-        stats_summary = f"""
-[分组] 有效订阅: {len(self.active_urls)} 条
+        stats_text = "\n".join(stats_lines) if stats_lines else "暂无有效节点"
+        stats_summary = f"""[分组] 有效订阅: {len(self.active_urls)} 条
 [分组] 失效订阅: {len(self.expired_urls)} 条
 [统计] 总节点数: {total_nodes} 条
 
 {stats_text}
-[完成] all.txt: {len(all_nodes)} 条
 """
+        
+        if all_nodes:
+            stats_summary += f"[完成] all.txt: {len(all_nodes)} 条"
         
         with open('stats.txt', 'w', encoding='utf-8') as f:
             f.write(stats_summary)
         
+        print("\n" + "="*50)
+        print("节点更新统计:")
+        print("="*50)
         print(stats_summary)
-    
-    def generate_clash_config(self, nodes: List[str]):
-        """生成Clash配置文件"""
-        clash_config = {
-            'port': 7890,
-            'socks-port': 7891,
-            'allow-lan': False,
-            'mode': 'Rule',
-            'log-level': 'info',
-            'external-controller': '127.0.0.1:9090',
-            'proxies': [],
-            'proxy-groups': [],
-            'rules': [
-                'DOMAIN-SUFFIX,google.com,PROXY',
-                'DOMAIN-KEYWORD,github,PROXY',
-                'IP-CIDR,127.0.0.0/8,DIRECT',
-                'GEOIP,CN,DIRECT',
-                'MATCH,PROXY'
-            ]
-        }
-        
-        proxy_index = 1
-        for node in nodes:
-            if node.startswith('ss://'):
-                try:
-                    clash_config['proxies'].append({
-                        'name': f'SS-{proxy_index}',
-                        'type': 'ss',
-                        'server': 'server_address',  # 需要从节点解析
-                        'port': 443,
-                        'cipher': 'aes-256-gcm',
-                        'password': 'password'
-                    })
-                    proxy_index += 1
-                except:
-                    pass
-        
-        if clash_config['proxies']:
-            clash_config['proxy-groups'] = [
-                {
-                    'name': 'PROXY',
-                    'type': 'select',
-                    'proxies': [p['name'] for p in clash_config['proxies']]
-                },
-                {
-                    'name': 'Auto',
-                    'type': 'url-test',
-                    'proxies': [p['name'] for p in clash_config['proxies']],
-                    'url': 'http://www.gstatic.com/generate_204',
-                    'interval': 300
-                }
-            ]
-            
-            with open('clash.yaml', 'w', encoding='utf-8') as f:
-                yaml.dump(clash_config, f, allow_unicode=True, default_flow_style=False)
-            
-            logger.info(f"[写入] clash.yaml: 包含 {len(clash_config['proxies'])} 个代理")
+        print("="*50)
+        logger.info(f"更新完成！有效订阅: {len(self.active_urls)}, 失效订阅: {len(self.expired_urls)}, 总节点: {total_nodes}")
 
 async def main():
     """主函数"""
@@ -348,6 +492,11 @@ async def main():
     
     if not manager.raw_urls:
         logger.warning("没有找到订阅链接，请在 subscriptions.txt 中添加链接")
+        print("请在 subscriptions.txt 文件中添加订阅链接")
+        with open('subscriptions.txt', 'w', encoding='utf-8') as f:
+            f.write("# 在此添加你的订阅链接，每行一个\n")
+            f.write("# 例如：\n")
+            f.write("# https://example.com/subscribe\n")
         return
     
     await manager.process_urls()
