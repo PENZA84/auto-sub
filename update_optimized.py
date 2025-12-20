@@ -453,7 +453,7 @@ class NodeManager:
                 with open(filename, 'w', encoding='utf-8') as f:
                     pass
         
-        # 保存合并文件 - 只保留一个 merged_all.txt
+        # 保存合并文件 - 只保留一个 all.txt
         all_nodes = []
         for protocol, nodes in self.nodes.items():
             all_nodes.extend(nodes)
@@ -466,7 +466,7 @@ class NodeManager:
                 for node in all_nodes:
                     f.write(f"{node}\n")
             
-            merged_count = len(all_nodes)
+            count = len(all_nodes)
             
             # 改进格式的统计信息
             separator = "─" * 40
@@ -482,7 +482,7 @@ class NodeManager:
 {separator}
 {chr(10).join(stats_lines)}
 {separator}
-💾 合并文件: merged_all.txt ({merged_count} 条)
+💾 合并文件: all.txt ({count} 条)
 {separator}
 """
         else:
