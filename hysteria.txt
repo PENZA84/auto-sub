@@ -1,6 +1,6 @@
 hysteria://62.210.10.186:50011?protocol=udp#🇫🇷 法国 | FRA
 hysteria://62.210.10.186:35511?protocol=udp#🇫🇷 法国 | FRA 2
-hysteria://62.210.196.68:26691?protocol=udp#🟠_🇫🇷_📶_github.com/Ruk1ng001_3661613034663966
+hysteria://62.210.196.68:26691?protocol=udp#法国 - 巴黎 - Online S.A.S. - 6
 hysteria://51.159.226.1:49003?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&delay=1547&downmbps=55&protocol=udp&insecure=1&peer=apple.com&udp=true&upmbps=11#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
 hysteria://108.181.24.77:11512?protocol=udp#🇺🇸US_1 | ⬇️ 4.5MB/s|37%|Netflix|Openai
 hysteria://208.87.243.151:17549?protocol=udp#🇺🇸US_2 | ⬇️ 3.1MB/s|38%|Netflix|Youtube|Openai
