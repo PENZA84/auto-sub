@@ -43,24 +43,38 @@ class NodeManager:
         self.subscriptions_file = 'subscriptions.txt'
         self.expired_file = 'expired_subscriptions.txt'
         
-    def load_urls(self):
-        """加载订阅链接"""
+        def load_urls(self):
+        """加载订阅链接，并去重写回文件"""
         if os.path.exists(self.subscriptions_file):
             with open(self.subscriptions_file, 'r', encoding='utf-8') as f:
-                urls = [line.strip() for line in f if line.strip()]
-                raw_urls = [url for url in urls if not url.startswith('#')]
+                # 读取原始内容，保留注释和空行
+                original_lines = f.readlines()
+                
+                # 提取有效的URL
+                urls = []
+                valid_lines = []  # 用于存储有效的行（非注释、非空行）
+                
+                for line in original_lines:
+                    stripped = line.strip()
+                    if stripped and not stripped.startswith('#'):
+                        urls.append(stripped)
+                        valid_lines.append(line)
                 
                 # 基础去重：基于字符串完全一致
-                before_count = len(raw_urls)
-                # 使用 dict.fromkeys 保持顺序并去重
-                self.raw_urls = list(dict.fromkeys(raw_urls))
-                after_count = len(self.raw_urls)
+                before_count = len(urls)
+                unique_urls = list(dict.fromkeys(urls))
+                after_count = len(unique_urls)
                 
                 if before_count > after_count:
                     removed = before_count - after_count
                     logger.info(f"[订阅去重] 从 {before_count} 个链接中去除了 {removed} 个重复链接，剩余 {after_count} 个")
+                    
+                    # 将去重后的链接写回文件
+                    self._write_deduplicated_subscriptions(original_lines, unique_urls)
                 else:
-                    logger.info(f"从 {self.subscriptions_file} 加载了 {len(self.raw_urls)} 个订阅链接")
+                    logger.info(f"从 {self.subscriptions_file} 加载了 {len(unique_urls)} 个订阅链接")
+                
+                self.raw_urls = unique_urls
         
         # 加载失效链接
         if os.path.exists(self.expired_file):
@@ -69,6 +83,37 @@ class NodeManager:
                 # 失效链接也进行基础去重
                 self.expired_urls = set(expired_urls)
                 logger.info(f"从 {self.expired_file} 加载了 {len(self.expired_urls)} 个失效链接")
+    
+    def _write_deduplicated_subscriptions(self, original_lines: List[str], unique_urls: List[str]):
+        """将去重后的订阅链接写回文件"""
+        try:
+            # 构建新内容
+            new_content_lines = []
+            url_index = 0
+            url_set = set(unique_urls)  # 用于快速查找
+            
+            for line in original_lines:
+                stripped = line.strip()
+                if not stripped:  # 空行
+                    new_content_lines.append(line)
+                elif stripped.startswith('#'):  # 注释行
+                    new_content_lines.append(line)
+                else:  # URL行
+                    if stripped in url_set and url_index < len(unique_urls):
+                        # 找到匹配的URL，添加
+                        new_content_lines.append(unique_urls[url_index] + '\n')
+                        url_index += 1
+                        # 从集合中移除，避免重复添加
+                        url_set.remove(stripped)
+            
+            # 写入文件
+            with open(self.subscriptions_file, 'w', encoding='utf-8') as f:
+                f.writelines(new_content_lines)
+            
+            logger.info(f"[文件更新] 已将去重后的订阅链接写回 {self.subscriptions_file}")
+            
+        except Exception as e:
+            logger.error(f"写回订阅文件失败: {e}")
 
     async def fetch_subscription(self, session, url: str) -> Optional[str]:
         """异步获取订阅内容"""
