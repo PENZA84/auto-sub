@@ -43,7 +43,7 @@ class NodeManager:
         self.subscriptions_file = 'subscriptions.txt'
         self.expired_file = 'expired_subscriptions.txt'
         
-        def load_urls(self):
+    def load_urls(self):
         """加载订阅链接，并去重写回文件"""
         if os.path.exists(self.subscriptions_file):
             with open(self.subscriptions_file, 'r', encoding='utf-8') as f:
