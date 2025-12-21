@@ -48,14 +48,28 @@ class NodeManager:
         if os.path.exists(self.subscriptions_file):
             with open(self.subscriptions_file, 'r', encoding='utf-8') as f:
                 urls = [line.strip() for line in f if line.strip()]
-                self.raw_urls = [url for url in urls if not url.startswith('#')]
-                logger.info(f"从 {self.subscriptions_file} 加载了 {len(self.raw_urls)} 个订阅链接")
+                raw_urls = [url for url in urls if not url.startswith('#')]
+                
+                # 基础去重：基于字符串完全一致
+                before_count = len(raw_urls)
+                # 使用 dict.fromkeys 保持顺序并去重
+                self.raw_urls = list(dict.fromkeys(raw_urls))
+                after_count = len(self.raw_urls)
+                
+                if before_count > after_count:
+                    removed = before_count - after_count
+                    logger.info(f"[订阅去重] 从 {before_count} 个链接中去除了 {removed} 个重复链接，剩余 {after_count} 个")
+                else:
+                    logger.info(f"从 {self.subscriptions_file} 加载了 {len(self.raw_urls)} 个订阅链接")
         
         # 加载失效链接
         if os.path.exists(self.expired_file):
             with open(self.expired_file, 'r', encoding='utf-8') as f:
-                self.expired_urls = {line.strip() for line in f if line.strip() and not line.startswith('#')}
-    
+                expired_urls = {line.strip() for line in f if line.strip() and not line.startswith('#')}
+                # 失效链接也进行基础去重
+                self.expired_urls = set(expired_urls)
+                logger.info(f"从 {self.expired_file} 加载了 {len(self.expired_urls)} 个失效链接")
+
     async def fetch_subscription(self, session, url: str) -> Optional[str]:
         """异步获取订阅内容"""
         try:
