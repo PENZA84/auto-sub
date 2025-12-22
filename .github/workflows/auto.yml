@@ -2,7 +2,7 @@ name: 自动更新订阅与节点优化版
 
 on:
   schedule:
-    - cron: '30 21 * * *'   # 北京时间 6:00 = UTC 22:00（前一天）
+    - cron: '30 20 * * *'   # 北京时间 6:00 = UTC 22:00（前一天）
   workflow_dispatch:
 
 jobs:
