@@ -1,5 +1,5 @@
-hysteria://62.210.10.186:50011?protocol=udp#🇫🇷 法国 | FRA
 hysteria://62.210.196.68:26691?protocol=udp#法国 - 巴黎 - Online S.A.S. - 2
+hysteria://62.210.10.186:50011?protocol=udp#🇫🇷_FR_法国
 hysteria://62.210.10.186:35511?protocol=udp#🇫🇷_FR_法国_1
 hysteria://108.181.24.77:11512?protocol=udp#🇺🇸US_1 | ⬇️ 4.5MB/s|37%|Netflix|Openai
 hysteria://208.87.243.151:17549?protocol=udp#🇺🇸US_2 | ⬇️ 3.1MB/s|38%|Netflix|Youtube|Openai
