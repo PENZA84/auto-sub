@@ -843,7 +843,6 @@ class NodeManager:
 {separator}
 📈 有效订阅: {len(self.active_urls):<4} 条
 📉 失效订阅: {len(self.expired_urls):<4} 条
-📦 总节点数: {total_nodes:<6} 条 (已去重)
 {separator}
 📁 节点分布:
 {separator}
