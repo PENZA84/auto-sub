@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-简化的节点订阅更新脚本
-支持多种协议，自动分离有效/失效节点，智能去重
+完整的节点订阅更新脚本
+支持多种协议，自动分离有效/失效节点，智能去重，完整保留所有参数
 """
 
 import os
@@ -14,9 +14,9 @@ import base64
 import asyncio
 import aiohttp
 import requests
-from urllib.parse import urlparse, urljoin, parse_qs
+from urllib.parse import urlparse, urljoin, parse_qs, quote, unquote
 from datetime import datetime
-from typing import List, Dict, Tuple, Set, Optional
+from typing import List, Dict, Tuple, Set, Optional, Any
 import logging
 
 # 配置日志
@@ -261,7 +261,7 @@ class NodeManager:
         return False
     
     def extract_clash_nodes(self, content: str, url: str) -> Dict[str, List[str]]:
-        """从Clash配置中提取节点"""
+        """从Clash配置中提取节点，完整保留所有参数"""
         result = {key: [] for key in self.nodes.keys()}
         
         try:
@@ -287,7 +287,7 @@ class NodeManager:
                 if not server or not port:
                     continue
                 
-                # 根据类型生成对应的链接
+                # 根据类型生成对应的链接，完整保留参数
                 if proxy_type == 'ss':
                     # shadowsocks格式: ss://method:password@server:port#name
                     password = proxy.get('password', '')
@@ -298,7 +298,7 @@ class NodeManager:
                         result['ss'].append(node_url)
                 
                 elif proxy_type == 'vmess':
-                    # vmess格式
+                    # vmess格式 - 完整保留所有参数
                     uuid = proxy.get('uuid', '')
                     if uuid and server and port:
                         config = {
@@ -314,37 +314,170 @@ class NodeManager:
                             "host": proxy.get('servername', '') or proxy.get('host', ''),
                             "path": proxy.get('path', ''),
                             "tls": proxy.get('tls', ''),
-                            "sni": proxy.get('sni', '')
+                            "sni": proxy.get('sni', ''),
+                            "alpn": proxy.get('alpn', ''),
+                            "fp": proxy.get('client-fingerprint', ''),
+                            "skip-cert-verify": proxy.get('skip-cert-verify', False)
                         }
+                        
+                        # 添加ws-opts相关参数
+                        if proxy.get('network') == 'ws':
+                            ws_opts = proxy.get('ws-opts', {})
+                            if isinstance(ws_opts, dict):
+                                if 'path' in ws_opts:
+                                    config['path'] = ws_opts['path']
+                                if 'headers' in ws_opts:
+                                    headers = ws_opts['headers']
+                                    if isinstance(headers, dict) and 'Host' in headers:
+                                        config['host'] = headers['Host']
+                        
+                        # 移除空值
+                        config = {k: v for k, v in config.items() if v not in [None, '', []]}
+                        
                         config_str = json.dumps(config, ensure_ascii=False, separators=(',', ':'))
                         encoded = base64.b64encode(config_str.encode()).decode()
                         node_url = f"vmess://{encoded}"
                         result['vmess'].append(node_url)
                 
                 elif proxy_type == 'trojan':
-                    # trojan格式: trojan://password@server:port#name
+                    # trojan格式 - 完整保留参数
                     password = proxy.get('password', '')
                     if password and server and port:
-                        node_url = f"trojan://{password}@{server}:{port}#{name}"
+                        # 构建参数字符串
+                        params = []
+                        
+                        if proxy.get('sni'):
+                            params.append(f"sni={proxy['sni']}")
+                        if proxy.get('alpn'):
+                            alpn_value = proxy['alpn']
+                            if isinstance(alpn_value, list):
+                                alpn_value = ','.join(alpn_value)
+                            params.append(f"alpn={alpn_value}")
+                        if proxy.get('skip-cert-verify'):
+                            params.append(f"allowInsecure={1 if proxy['skip-cert-verify'] else 0}")
+                        if proxy.get('network') == 'ws':
+                            params.append("type=ws")
+                            ws_opts = proxy.get('ws-opts', {})
+                            if isinstance(ws_opts, dict):
+                                if 'path' in ws_opts:
+                                    params.append(f"path={ws_opts['path']}")
+                                if 'headers' in ws_opts:
+                                    headers = ws_opts['headers']
+                                    if isinstance(headers, dict) and 'Host' in headers:
+                                        params.append(f"host={headers['Host']}")
+                        
+                        param_str = '&'.join(params)
+                        if param_str:
+                            node_url = f"trojan://{password}@{server}:{port}?{param_str}#{name}"
+                        else:
+                            node_url = f"trojan://{password}@{server}:{port}#{name}"
                         result['trojan'].append(node_url)
                 
                 elif proxy_type == 'vless':
-                    # vless格式
+                    # vless格式 - 完整保留参数
                     uuid = proxy.get('uuid', '')
                     if uuid and server and port:
-                        node_url = f"vless://{uuid}@{server}:{port}?type={proxy.get('network', 'tcp')}#{name}"
+                        # 构建参数字符串
+                        params = []
+                        
+                        params.append(f"type={proxy.get('network', 'tcp')}")
+                        
+                        if proxy.get('tls'):
+                            params.append("security=tls")
+                            if proxy.get('sni'):
+                                params.append(f"sni={proxy['sni']}")
+                            if proxy.get('alpn'):
+                                alpn_value = proxy['alpn']
+                                if isinstance(alpn_value, list):
+                                    alpn_value = ','.join(alpn_value)
+                                params.append(f"alpn={alpn_value}")
+                            if proxy.get('fp'):
+                                params.append(f"fp={proxy['fp']}")
+                        
+                        if proxy.get('network') == 'ws':
+                            ws_opts = proxy.get('ws-opts', {})
+                            if isinstance(ws_opts, dict):
+                                if 'path' in ws_opts:
+                                    params.append(f"path={ws_opts['path']}")
+                                if 'headers' in ws_opts:
+                                    headers = ws_opts['headers']
+                                    if isinstance(headers, dict) and 'Host' in headers:
+                                        params.append(f"host={headers['Host']}")
+                        
+                        if proxy.get('skip-cert-verify'):
+                            params.append("allowInsecure=1")
+                        
+                        param_str = '&'.join(params)
+                        node_url = f"vless://{uuid}@{server}:{port}?{param_str}#{name}"
                         result['vless'].append(node_url)
                 
                 elif proxy_type == 'hysteria':
                     # hysteria格式
-                    node_url = f"hysteria://{server}:{port}?protocol={proxy.get('protocol', 'udp')}#{name}"
+                    params = []
+                    
+                    if proxy.get('protocol'):
+                        params.append(f"protocol={proxy['protocol']}")
+                    if proxy.get('sni'):
+                        params.append(f"sni={proxy['sni']}")
+                    if proxy.get('alpn'):
+                        alpn_value = proxy['alpn']
+                        if isinstance(alpn_value, list):
+                            alpn_value = ','.join(alpn_value)
+                        params.append(f"alpn={alpn_value}")
+                    if proxy.get('skip-cert-verify'):
+                        params.append("insecure=1")
+                    
+                    param_str = '&'.join(params)
+                    if param_str:
+                        node_url = f"hysteria://{server}:{port}?{param_str}#{name}"
+                    else:
+                        node_url = f"hysteria://{server}:{port}#{name}"
                     result['hysteria'].append(node_url)
                 
+                elif proxy_type == 'hysteria2':
+                    # hysteria2格式
+                    params = []
+                    
+                    if proxy.get('sni'):
+                        params.append(f"sni={proxy['sni']}")
+                    if proxy.get('alpn'):
+                        alpn_value = proxy['alpn']
+                        if isinstance(alpn_value, list):
+                            alpn_value = ','.join(alpn_value)
+                        params.append(f"alpn={alpn_value}")
+                    if proxy.get('skip-cert-verify'):
+                        params.append("insecure=1")
+                    
+                    param_str = '&'.join(params)
+                    if param_str:
+                        node_url = f"hysteria2://{server}:{port}?{param_str}#{name}"
+                    else:
+                        node_url = f"hysteria2://{server}:{port}#{name}"
+                    result['hysteria2'].append(node_url)
+                
                 elif proxy_type == 'tuic':
-                    # tuic格式
+                    # tuic格式 - 完整保留参数
                     uuid = proxy.get('uuid', '') or proxy.get('password', '')
                     if uuid and server and port:
-                        node_url = f"tuic://{uuid}@{server}:{port}#{name}"
+                        params = []
+                        
+                        if proxy.get('sni'):
+                            params.append(f"sni={proxy['sni']}")
+                        if proxy.get('alpn'):
+                            alpn_value = proxy['alpn']
+                            if isinstance(alpn_value, list):
+                                alpn_value = ','.join(alpn_value)
+                            params.append(f"alpn={alpn_value}")
+                        if proxy.get('skip-cert-verify'):
+                            params.append("allow_insecure=1")
+                        if proxy.get('udp-relay-mode'):
+                            params.append(f"udp_relay_mode={proxy['udp-relay-mode']}")
+                        
+                        param_str = '&'.join(params)
+                        if param_str:
+                            node_url = f"tuic://{uuid}@{server}:{port}?{param_str}#{name}"
+                        else:
+                            node_url = f"tuic://{uuid}@{server}:{port}#{name}"
                         result['tuic'].append(node_url)
             
             logger.info(f"从Clash配置中提取了 {sum(len(v) for v in result.values())} 个节点")
@@ -353,7 +486,7 @@ class NodeManager:
             logger.error(f"解析Clash配置失败: {e}")
         
         return result
-    
+        
     def parse_node(self, config: str) -> Optional[Dict]:
         """解析单个节点配置"""
         config = config.strip()
@@ -839,26 +972,26 @@ class NodeManager:
             separator = "─" * 40
             stats_summary = f"""
 {separator}
-📊 节点订阅统计
+📊📊 节点订阅统计
 {separator}
-📈 有效订阅: {len(self.active_urls):<4} 条
-📉 失效订阅: {len(self.expired_urls):<4} 条
+📈📈 有效订阅: {len(self.active_urls):<4} 条
+📉📉 失效订阅: {len(self.expired_urls):<4} 条
 {separator}
-📁 节点分布:
+📁📁 节点分布:
 {separator}
 {chr(10).join(stats_lines)}
 {separator}
-💾 合并文件: all.txt ({all_count} 条, 已去重)
+💾💾 合并文件: all.txt ({all_count} 条, 已去重)
 {separator}
 """
         else:
             stats_summary = f"""
 {separator}
-📊 节点订阅统计
+📊📊 节点订阅统计
 {separator}
-📈 有效订阅: {len(self.active_urls):<4} 条
-📉 失效订阅: {len(self.expired_urls):<4} 条
-📦 总节点数: 0 条
+📈📈 有效订阅: {len(self.active_urls):<4} 条
+📉📉 失效订阅: {len(self.expired_urls):<4} 条
+📦📦 总节点数: 0 条
 {separator}
 ⚠️ 未解析到任何有效节点
 {separator}
@@ -893,3 +1026,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
