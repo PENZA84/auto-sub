@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-完整的节点订阅更新脚本
 支持多种协议，自动分离有效/失效节点，智能去重，完整保留所有参数
 """
 
@@ -974,24 +973,24 @@ class NodeManager:
 {separator}
 📊📊 节点订阅统计
 {separator}
-📈📈 有效订阅: {len(self.active_urls):<4} 条
-📉📉 失效订阅: {len(self.expired_urls):<4} 条
+📈 有效订阅: {len(self.active_urls):<4} 条
+📉 失效订阅: {len(self.expired_urls):<4} 条
 {separator}
-📁📁 节点分布:
+📁 节点分布:
 {separator}
 {chr(10).join(stats_lines)}
 {separator}
-💾💾 合并文件: all.txt ({all_count} 条, 已去重)
+💾 合并文件: all.txt ({all_count} 条, 已去重)
 {separator}
 """
         else:
             stats_summary = f"""
 {separator}
-📊📊 节点订阅统计
+📊 节点订阅统计
 {separator}
-📈📈 有效订阅: {len(self.active_urls):<4} 条
-📉📉 失效订阅: {len(self.expired_urls):<4} 条
-📦📦 总节点数: 0 条
+📈 有效订阅: {len(self.active_urls):<4} 条
+📉 失效订阅: {len(self.expired_urls):<4} 条
+📦 总节点数: 0 条
 {separator}
 ⚠️ 未解析到任何有效节点
 {separator}
