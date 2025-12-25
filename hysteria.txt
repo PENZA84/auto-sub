@@ -1,5 +1,5 @@
-hysteria://62.210.196.68:26691?protocol=udp&sni=apple.com&alpn=h3&insecure=1#法国 - 巴黎 - Online S.A.S. - 2
-hysteria://62.210.10.186:50011?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷_FR_法国
+hysteria://62.210.10.186:50011?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷 法国 | FRA
+hysteria://62.210.196.68:26691?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷_FR_法国
 hysteria://62.210.10.186:35511?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷_FR_法国_1
 hysteria://108.181.24.77:11512?sni=apple.com&alpn=h3&insecure=1#🇺🇸US_1 | ⬇️ 4.5MB/s|37%|Netflix|Openai
 hysteria://208.87.243.151:17549?sni=www.bing.com&alpn=h3&insecure=1#🇺🇸US_2 | ⬇️ 3.1MB/s|38%|Netflix|Youtube|Openai
@@ -7,4 +7,3 @@ hysteria://51.159.226.1:14241?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇳
 hysteria://195.154.200.40:15010?sni=apple.com&alpn=h3&insecure=1#🇫🇷FR_1 | ⬇️ 3.4MB/s|25%|Netflix|Youtube|Openai
 hysteria://176.32.35.226:62003?alpn=h3&insecure=1#🇷🇺RU_3 | ⬇️ 910KB/s|0%|Youtube
 hysteria://185.22.155.71:10803?sni=www.bing.com&alpn=h3&insecure=1#🇷🇺RU_4 | ⬇️ 1.4MB/s|33%
-hysteria://51.159.226.1:49003?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&delay=1547&downmbps=55&protocol=udp&insecure=1&peer=apple.com&udp=true&upmbps=11#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
