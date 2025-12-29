@@ -1,6 +1,4 @@
-tuic://f19c7009-7630-4bb4-b26d-09eec0b1b769@45.144.174.61:60000?sni=python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇭🇰 香港 | HKG 7
-tuic://f19c7009-7630-4bb4-b26d-09eec0b1b769@62.84.172.51:42156?sni=www.apple.com&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇳🇱 荷兰 | NLD 2
-tuic://f19c7009-7630-4bb4-b26d-09eec0b1b769@136.0.41.47:40000?sni=www.python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇸 美国 | USA 15
-tuic://f19c7009-7630-4bb4-b26d-09eec0b1b769@185.34.144.18:39001?sni=www.python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇸 美国 | USA 23
-tuic://f19c7009-7630-4bb4-b26d-09eec0b1b769@192.227.153.87:60000?sni=www.python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇸 美国 | USA 30
-tuic://f19c7009-7630-4bb4-b26d-09eec0b1b769@107.150.1.135:35000?sni=www.python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇸 美国 | USA 37
+tuic://5936c09e-b309-4946-966e-4245afd04a6a@88.151.195.34:60000?sni=python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇦 乌克兰 | UKR
+tuic://5936c09e-b309-4946-966e-4245afd04a6a@107.172.250.169:60000?sni=linux.fb7ba4.www.python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇸 美国 | USA 10
+tuic://5936c09e-b309-4946-966e-4245afd04a6a@136.0.41.79:60000?sni=www.python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇸 美国 | USA 20
+tuic://f19c7009-7630-4bb4-b26d-09eec0b1b769@136.0.41.79:60000?sni=www.python.org&alpn=h3&allow_insecure=1&udp_relay_mode=native#🇺🇸 美国 | USA 45
