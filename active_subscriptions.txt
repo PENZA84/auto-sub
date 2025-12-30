@@ -1,3 +1,4 @@
+https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false
 https://bujidao.cc/sub?key=I6MmA30LKRgZfVzgiDWcW3KFbN5BGxWL
 https://file.uhsea.com/2501/295ccc51ad490cb731e8a95f9212b4f1BI.yaml
 https://file.uhsea.com/2501/2f1928c440325914dff2c1ffe0ccec4aR3.yaml
@@ -9,7 +10,6 @@ https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodev2ray.txt
 https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/v2rayshare.txt
 https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/wenode.txt
 https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt
-https://raw.githubusercontent.com/Flikify/getNode/main/clash.yaml
 https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml
 https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
 https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/utils/pool/output.yaml
@@ -22,7 +22,6 @@ https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/main/APIs/
 https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml
 https://raw.githubusercontent.com/Ruk1ng001/freeSub/refs/heads/main/v2ray
 https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt
-https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml
 https://raw.githubusercontent.com/actionsfz/v2ray/refs/heads/master/all.yaml
 https://raw.githubusercontent.com/acymz/AutoVPN/main/data/V2.txt
 https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
