@@ -1,6 +1,6 @@
 # 节点订阅统计与下载
 
-📅 更新时间：2026-01-03 04:42:27 CST
+📅 更新时间：2026-01-04 04:41:53 CST
 
 ## 📊 节点统计
 ```
@@ -13,35 +13,35 @@
 ────────────────────────────────────────
 📁 节点分布:
 ────────────────────────────────────────
-[SS] 有效 5135 条
+[SS] 有效 5003 条
 [SSR] 有效 8 条
-[VMESS] 有效 4925 条
-[VLESS] 有效 6966 条
-[TROJAN] 有效 1418 条
-[HYSTERIA] 有效 9 条
-[HYSTERIA2] 有效 239 条
-[TUIC] 有效 4 条
+[VMESS] 有效 4829 条
+[VLESS] 有效 7058 条
+[TROJAN] 有效 1606 条
+[HYSTERIA] 有效 10 条
+[HYSTERIA2] 有效 306 条
+[TUIC] 有效 14 条
 ────────────────────────────────────────
-💾 合并文件: all.txt (18704 条, 已去重)
+💾 合并文件: all.txt (18834 条, 已去重)
 ────────────────────────────────────────
 ```
 
 ## 📁 有效节点文件
-- 📄 [ss.txt](ss.txt) (约 5135 个节点)
+- 📄 [ss.txt](ss.txt) (约 5003 个节点)
 - 📄 [ssr.txt](ssr.txt) (约 8 个节点)
-- 📄 [vmess.txt](vmess.txt) (约 4925 个节点)
-- 📄 [vless.txt](vless.txt) (约 6966 个节点)
-- 📄 [trojan.txt](trojan.txt) (约 1418 个节点)
-- 📄 [hysteria.txt](hysteria.txt) (约 9 个节点)
-- 📄 [hysteria2.txt](hysteria2.txt) (约 239 个节点)
-- 📄 [tuic.txt](tuic.txt) (约 4 个节点)
+- 📄 [vmess.txt](vmess.txt) (约 4829 个节点)
+- 📄 [vless.txt](vless.txt) (约 7058 个节点)
+- 📄 [trojan.txt](trojan.txt) (约 1606 个节点)
+- 📄 [hysteria.txt](hysteria.txt) (约 10 个节点)
+- 📄 [hysteria2.txt](hysteria2.txt) (约 306 个节点)
+- 📄 [tuic.txt](tuic.txt) (约 14 个节点)
 
 ## ⚠️ 失效节点文件
 > 注意：失效节点文件中的链接需要手动处理
 - ❌ [expired_subscriptions.txt (22 个失效链接)](expired_subscriptions.txt)
 
 ## 💾 合并文件
-- 📦 [all.txt (18704 个所有节点)](all.txt)
+- 📦 [all.txt (18834 个所有节点)](all.txt)
 
 ## 📂 其他文件
 - 📄 [active_subscriptions.txt](active_subscriptions.txt)
