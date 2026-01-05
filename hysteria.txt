@@ -1,4 +1,4 @@
-hysteria://62.210.196.68:26691?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷_FR_法国
+hysteria://62.210.196.68:26691?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷 法国 | FRA
 hysteria://62.210.10.186:35511?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷_FR_法国_1
 hysteria://62.210.10.186:50011?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🇫🇷_FR_法国_2
 hysteria://108.181.24.77:11512?sni=apple.com&alpn=h3&insecure=1#🇺🇸US_1 | ⬇️ 4.5MB/s|37%|Netflix|Openai
