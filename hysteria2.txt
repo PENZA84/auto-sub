@@ -1,11 +1,17 @@
-hysteria2://xjp.kaixincloud.top:25200?sni=xjp.kaixincloud.top#🇨🇦 加拿大 | CAN
-hysteria2://185.181.10.186:8443?insecure=1#🇩🇪 德国 | DEU 12
-hysteria2://hk.xn--mnqs5do46a.site:21575#🇭🇰 香港 | HKG 37
-hysteria2://hk2.jueduibupao.top:42804?sni=hk2.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 45
-hysteria2://kr.xn--mnqs5do46a.site:21357#🇰🇷 韩国 | KOR 2
-hysteria2://linsg2.jueduibupao.top:49088?sni=linsg2.jueduibupao.top&insecure=1#🇸🇬 新加坡 | SGP 7
-hysteria2://azcus1.jueduibupao.top:20101?sni=azcus1.jueduibupao.top&insecure=1#🇺🇸 美国 | USA 22
-hysteria2://194.36.88.188:8443?insecure=1#德国 - 巴特基辛根 - Georg Kroeber - 10
+hysteria2://jnd.dabache.top:20000?sni=jnd.dabache.top#🇨🇦 加拿大 | CAN
+hysteria2://83.229.86.174:8443?insecure=1#🇩🇪 德国 | DEU
+hysteria2://130.61.50.75:6443?sni=dash.cloudflare.com&insecure=1#🇩🇪 德国 | DEU 13
+hysteria2://hk3.jueduibupao.top:46298?sni=hk3.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 48
+hysteria2://hl.kunlun01.com:20301?sni=hl.kunlun01.com&insecure=1#🇳🇱 荷兰 | NLD
+hysteria2://mosike.zuomomo.top:16666#🇷🇺 俄罗斯 | RUS
+hysteria2://mosike.zuomomo.top:16667#🇷🇺 俄罗斯 | RUS 3
+hysteria2://sg.zuomomo.top:16666#🇸🇬 新加坡 | SGP 3
+hysteria2://sg.zuomomo.top:16667#🇸🇬 新加坡 | SGP 13
+hysteria2://thshy01.gutingting.com:20000?sni=mirrors.xtom.hk&insecure=1#🇹🇭 泰国 | THA
+hysteria2://los.zuomomo.top:16667#🇺🇸 美国 | USA 4
+hysteria2://los.zuomomo.top:16666#🇺🇸 美国 | USA 9
+hysteria2://lvs.jueduibupao.top:50001?sni=lvs.jueduibupao.top&insecure=1#🇺🇸 美国 | USA 11
+hysteria2://185.181.10.186:8443?insecure=1#德国 - 巴特基辛根 - Georg Kroeber - 2
 hysteria2://mg2.mangshe.xyz:2056?sni=mg2.mangshe.xyz&insecure=1#美国2
 hysteria2://xjp1.mangshe.xyz:2055?sni=xjp1.mangshe.xyz&insecure=1#新加坡1
 hysteria2://jp7.dexlos.com:13778?insecure=1#JP
