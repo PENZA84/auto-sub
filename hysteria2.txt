@@ -1,17 +1,15 @@
-hysteria2://jnd.dabache.top:20000?sni=jnd.dabache.top#🇨🇦 加拿大 | CAN
-hysteria2://83.229.86.174:8443?insecure=1#🇩🇪 德国 | DEU
-hysteria2://130.61.50.75:6443?sni=dash.cloudflare.com&insecure=1#🇩🇪 德国 | DEU 13
-hysteria2://hk3.jueduibupao.top:46298?sni=hk3.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 48
-hysteria2://hl.kunlun01.com:20301?sni=hl.kunlun01.com&insecure=1#🇳🇱 荷兰 | NLD
-hysteria2://mosike.zuomomo.top:16666#🇷🇺 俄罗斯 | RUS
-hysteria2://mosike.zuomomo.top:16667#🇷🇺 俄罗斯 | RUS 3
-hysteria2://sg.zuomomo.top:16666#🇸🇬 新加坡 | SGP 3
-hysteria2://sg.zuomomo.top:16667#🇸🇬 新加坡 | SGP 13
-hysteria2://thshy01.gutingting.com:20000?sni=mirrors.xtom.hk&insecure=1#🇹🇭 泰国 | THA
-hysteria2://los.zuomomo.top:16667#🇺🇸 美国 | USA 4
-hysteria2://los.zuomomo.top:16666#🇺🇸 美国 | USA 9
-hysteria2://lvs.jueduibupao.top:50001?sni=lvs.jueduibupao.top&insecure=1#🇺🇸 美国 | USA 11
-hysteria2://185.181.10.186:8443?insecure=1#德国 - 巴特基辛根 - Georg Kroeber - 2
+hysteria2://hk1.jueduibupao.top:50001?sni=hk1.jueduibupao.top&insecure=1#🇦🇪 阿联酋 | ARE
+hysteria2://de1.jueduibupao.top:47308?sni=de1.jueduibupao.top&insecure=1#🇩🇪 德国 | DEU
+hysteria2://hk3.jueduibupao.top:40065?sni=hk3.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 2
+hysteria2://hk.xn--mnqs5do46a.site:21299#🇭🇰 香港 | HKG 21
+hysteria2://jp.xn--mnqs5do46a.site:21770#🇯🇵 日本 | JPN
+hysteria2://kr.xn--mnqs5do46a.site:21019#🇰🇷 韩国 | KOR
+hysteria2://kr.xn--mnqs5do46a.site:21526#🇰🇷 韩国 | KOR 2
+hysteria2://my.xn--mnqs5do46a.site:21351#🇲🇾 马来西亚 | MYS
+hysteria2://lvs.jueduibupao.top:50001?sni=lvs.jueduibupao.top&insecure=1#🇺🇸 美国 | USA 22
+hysteria2://85.209.53.178:8443?insecure=1#德国 - 巴特基辛根 - Georg Kroeber - 1
+hysteria2://de3.xiaoliyu.cyou:4433?sni=de3.xiaoliyu.cyou&insecure=1#DE144｜机房｜低风险
+hysteria2://de3.xiaoliyu.cyou:443?sni=de3.xiaoliyu.cyou&insecure=1#DE145｜机房｜低风险
 hysteria2://mg2.mangshe.xyz:2056?sni=mg2.mangshe.xyz&insecure=1#美国2
 hysteria2://xjp1.mangshe.xyz:2055?sni=xjp1.mangshe.xyz&insecure=1#新加坡1
 hysteria2://jp7.dexlos.com:13778?insecure=1#JP
@@ -53,6 +51,8 @@ hysteria2://129.153.59.124:54530?sni=www.bing.com&alpn=h3&insecure=1#🇨🇦CA_
 hysteria2://209.141.47.127:3234?insecure=1#🇺🇸US_6 | ⬇️ 4.0MB/s|Netflix|Openai|Gemini
 hysteria2://108.181.5.130:4710?sni=apple.com&insecure=1#🇺🇸US_7 | ⬇️ 939KB/s|37%|Netflix|Openai
 hysteria2://192.227.152.86:61001?sni=192-227-152-86.nip.io&insecure=1#🇺🇸US_8 | ⬇️ 893KB/s|Netflix|Disney|Openai
+hysteria2://7424db1f-ba68-496d-9426-4018b6a3a23c@de3.xiaoliyu.cyou:4433?insecure=1&sni=de3.xiaoliyu.cyou#DE144%EF%BD%9C%E6%9C%BA%E6%88%BF%EF%BD%9C%E4%BD%8E%E9%A3%8E%E9%99%A9
+hysteria2://7424db1f-ba68-496d-9426-4018b6a3a23c@de3.xiaoliyu.cyou:443?insecure=1&sni=de3.xiaoliyu.cyou#DE145%EF%BD%9C%E6%9C%BA%E6%88%BF%EF%BD%9C%E4%BD%8E%E9%A3%8E%E9%99%A9
 hysteria2://78c2bad7-f5f3-41f2-88cc-81de9d05040b@mg2.mangshe.xyz:2056?insecure=1&sni=mg2.mangshe.xyz#%E7%BE%8E%E5%9B%BD2
 hysteria2://78c2bad7-f5f3-41f2-88cc-81de9d05040b@xjp1.mangshe.xyz:2055?insecure=1&sni=xjp1.mangshe.xyz#%E6%96%B0%E5%8A%A0%E5%9D%A11
 hysteria2://95D27EEF-B7AE-4076-BA39-40FDFA3D0F61@jp7.dexlos.com:13778?insecure=1#JP
