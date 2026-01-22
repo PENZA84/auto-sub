@@ -1,24 +1,4 @@
-hysteria2://xyhk34994.mggl.wang:35789?sni=xyhk34994.mggl.wang#🇭🇰 香港 | HKG 25
-hysteria2://hkhgc.v2linkok.com:35095?sni=www.bing.com&insecure=1#🔴🇭🇰[🎬🧠📺🎭]_github.com/Ruk1ng001_8a1c1791
-hysteria2://aws-linkhy17.liangxin1.xyz:443?sni=bilibili-jp3.biliimg.com&insecure=1#🔴🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_b1c562ac
-hysteria2://aws-linkhy10.liangxin1.xyz:60000?sni=iosapps.itunes.apple.com&insecure=1#🔴🇸🇬[🎬🤖📺🎭]_github.com/Ruk1ng001_bed6c6d7
-hysteria2://hanguo.v2linkok.com:35105?sni=www.bing.com&insecure=1#🟢🇰🇷[🎬🤖📺🎭]_github.com/Ruk1ng001_7c9ecb75
-hysteria2://aws-linkhy15.liangxin1.xyz:60000?sni=bilibili-jp.biliimg.com&insecure=1#🔴🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_011c8914
-hysteria2://aws-linkhy2.liangxin1.xyz:60000?sni=iosapps.itunes.apple.com&insecure=1#🔴🇭🇰[🎬🧠📺🎭]_github.com/Ruk1ng001_b5fa4dc5
-hysteria2://aws-linkhy11.liangxin1.xyz:443?sni=iosapps.itunes.apple.com&insecure=1#🔴🇸🇬[🎬🤖📺🎭]_github.com/Ruk1ng001_759bf10e
-hysteria2://jp4.v2linkok.com:35102?sni=www.bing.com&insecure=1#🟢🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_4958ff3f
-hysteria2://aws-linkhy21.liangxin1.xyz:443?sni=bilibili-kr.biliimg.com&insecure=1#🔴🇰🇷[🎬🤖📺🎭]_github.com/Ruk1ng001_a67be55a
-hysteria2://jp.v2linkok.com:35099?sni=www.bing.com&insecure=1#🟢🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_022be187
-hysteria2://203.10.97.121:443?sni=www.apple.com&insecure=1#🔴🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_c0430c3a
-hysteria2://74.48.4.157:41493?insecure=1#🔴🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_68d72d34
-hysteria2://aws-linkhy27.liangxin1.xyz:443?sni=www.apple.com&insecure=1#🔴🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_43ddb0cf
-hysteria2://uk2.v2linkok.com:35083?sni=www.bing.com&insecure=1#🟢🇩🇪[🎬🤖📺🎭]_github.com/Ruk1ng001_73ef559c
-hysteria2://panel.ssrrweb.com:35098?sni=www.bing.com&insecure=1#🔴🇭🇰[🎬🧠📺🎭]_github.com/Ruk1ng001_6df70d2b
-hysteria2://newget.v2linkok.com:35118?sni=www.bing.com&insecure=1#🔴🇹🇭[🎬🤖📺🎭]_github.com/Ruk1ng001_b4764ac6
-hysteria2://my.v2linkok.com:35107?sni=www.bing.com&insecure=1#🟢🇲🇾[🎬🤖📺🎭]_github.com/Ruk1ng001_4781bb3b
-hysteria2://br.v2linkok.com:35117?sni=www.bing.com&insecure=1#🟡🇧🇷[🎬🤖📺🎭]_github.com/Ruk1ng001_80a2bf0e
-hysteria2://fr.v2linkok.com:35086?sni=www.bing.com&insecure=1#🟢🇫🇷[🎬🤖📺🎭]_github.com/Ruk1ng001_a7a9e559
-hysteria2://51.75.118.149:20248?sni=dash.cloudflare.com&insecure=1#FR2｜机房｜低风险
+hysteria2://107.148.225.121:8073?sni=www.bing.com&insecure=1#US131｜机房｜低风险
 hysteria2://mg2.mangshe.xyz:2056?sni=mg2.mangshe.xyz&insecure=1#美国2
 hysteria2://xjp1.mangshe.xyz:2055?sni=xjp1.mangshe.xyz&insecure=1#新加坡1
 hysteria2://jp7.dexlos.com:13778?insecure=1#JP
@@ -47,8 +27,6 @@ hysteria2://77.90.41.197:35000?sni=api.kermanshahi.org&insecure=1#🛠️73@Conf
 hysteria2://2a0c:4ac1:8::121:443?sni=api.kermanshahi.org#ConfigV2RayNG #8
 hysteria2://2a0f:5707:aaf1:4d5b::1:5707?sni=api.kermanshahi.org#ConfigV2RayNG #9
 hysteria2://72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com:443?sni=72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com#telegram » mainv𝟮ray¹
-hysteria2://146.56.164.36:443?sni=api.push.apple.com&insecure=1#All-@V2rayAlpha--1
-hysteria2://152.69.220.212:443?sni=api.push.apple.com&insecure=1#All-@V2rayAlpha--2
 hysteria2://channel1.saghetalaie.homes:46914?sni=nalog.ru&insecure=1#🇫🇮h@ConfigV2RayNG
 hysteria2://2a01:4f9:4b:f378::1:443?sni=www.bing.com&insecure=1#telegram » mainv𝟮ray¹ #1
 hysteria2://channel3.saghetalaie.homes:46914?sni=www.bing.com&insecure=1#⛄11@ConfigV2RayNG
@@ -59,7 +37,7 @@ hysteria2://129.153.59.124:54530?sni=www.bing.com&alpn=h3&insecure=1#🇨🇦CA_
 hysteria2://209.141.47.127:3234?insecure=1#🇺🇸US_6 | ⬇️ 4.0MB/s|Netflix|Openai|Gemini
 hysteria2://108.181.5.130:4710?sni=apple.com&insecure=1#🇺🇸US_7 | ⬇️ 939KB/s|37%|Netflix|Openai
 hysteria2://192.227.152.86:61001?sni=192-227-152-86.nip.io&insecure=1#🇺🇸US_8 | ⬇️ 893KB/s|Netflix|Disney|Openai
-hysteria2://a516b408-e06d-4278-9e6d-5271571ecab5@51.75.118.149:20248?insecure=1&sni=dash.cloudflare.com#FR2%EF%BD%9C%E6%9C%BA%E6%88%BF%EF%BD%9C%E4%BD%8E%E9%A3%8E%E9%99%A9
+hysteria2://8d4159c9-d770-40aa-9af4-6a80360697f7@107.148.225.121:8073?insecure=1&sni=www.bing.com#US131%EF%BD%9C%E6%9C%BA%E6%88%BF%EF%BD%9C%E4%BD%8E%E9%A3%8E%E9%99%A9
 hysteria2://78c2bad7-f5f3-41f2-88cc-81de9d05040b@mg2.mangshe.xyz:2056?insecure=1&sni=mg2.mangshe.xyz#%E7%BE%8E%E5%9B%BD2
 hysteria2://78c2bad7-f5f3-41f2-88cc-81de9d05040b@xjp1.mangshe.xyz:2055?insecure=1&sni=xjp1.mangshe.xyz#%E6%96%B0%E5%8A%A0%E5%9D%A11
 hysteria2://95D27EEF-B7AE-4076-BA39-40FDFA3D0F61@jp7.dexlos.com:13778?insecure=1#JP
@@ -91,8 +69,6 @@ hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@[2a0f:5707:aaf1:4d5b::1]:5707?i
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@[2a14:3f87:f001:1a::a]:443?insecure=0&sni=api.kermanshahi.org&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi#ConfigV2RayNG%20%2311
 hysteria2://c3dc8d26-ab2b-11ec-a8bf-f23c91cfbbc9@72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com:443?insecure=0&sni=72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com#telegram%20%C2%BB%20mainv%F0%9D%9F%AEray%C2%B9
 hysteria2://dongtaiwang.com@[2001:bc8:32d7:302::11]:443?insecure=1#14%F0%9F%94%B5%40ConfigV2RayNG
-hysteria2://e343471a-aad3-40da-9dea-72cc8c7dce5f@146.56.164.36:443?insecure=1&sni=api.push.apple.com#All-%40V2rayAlpha--1
-hysteria2://e343471a-aad3-40da-9dea-72cc8c7dce5f@152.69.220.212:443?insecure=1&sni=api.push.apple.com#All-%40V2rayAlpha--2
 hysteria2://freehomesvpnchannel3@channel1.saghetalaie.homes:46914?insecure=1&sni=nalog.ru&obfs=salamander&obfs-password=&O#28YB5qK!5t#U#%F0%9F%87%AB%F0%9F%87%AEh%40ConfigV2RayNG
 hysteria2://linux.do@[2a01:4f9:4b:f378::1]:443?insecure=1&sni=www.bing.com#telegram%20%C2%BB%20mainv%F0%9D%9F%AEray%C2%B9%20%231
 hysteria2://yhqy5AHofQq@channel3.saghetalaie.homes:46914?insecure=1&sni=www.bing.com&obfs=salamander&obfs-password=&O#28YB5qK!5t#U#%E2%9B%8411%40ConfigV2RayNG
