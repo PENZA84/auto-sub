@@ -1,14 +1,21 @@
-hysteria2://de1.jueduibupao.top:46976?sni=de1.jueduibupao.top&insecure=1#🇩🇪 德国 | DEU
-hysteria2://de1.jueduibupao.top:46389?sni=de1.jueduibupao.top&insecure=1#🇩🇪 德国 | DEU 3
-hysteria2://uk1.jueduibupao.top:48556?sni=uk1.jueduibupao.top&insecure=1#🇬🇧 英国 | GBR 3
-hysteria2://hkt1.jueduibupao.top:47944?sni=hkt1.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 22
-hysteria2://hkt2.jueduibupao.top:42434?sni=hkt1.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 34
-hysteria2://hk3.jueduibupao.top:40090?sni=hk3.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 35
-hysteria2://hk3.jueduibupao.top:49415?sni=hk3.jueduibupao.top&insecure=1#🇭🇰 香港 | HKG 47
-hysteria2://linsg2.jueduibupao.top:40394?sni=linsg2.jueduibupao.top&insecure=1#🇸🇬 新加坡 | SGP 4
-hysteria2://linsg3.jueduibupao.top:41881?sni=linsg3.jueduibupao.top&insecure=1#🇸🇬 新加坡 | SGP 8
-hysteria2://us.xiongchumo.shop:21824?sni=us.xiongchumo.shop#🇺🇸 美国 | USA 11
-hysteria2://visg.556359.xyz:19500?sni=go.microsoft.com&insecure=1#SG2｜商宽｜非常安全
+hysteria2://204.10.194.86:20000?sni=www.bing.com&insecure=1#🇩🇪 德国 | DEU 3
+hysteria2://103.197.71.101:20000?sni=www.bing.com&insecure=1#🇭🇰 香港 | HKG 5
+hysteria2://103.197.71.100:20000?sni=www.bing.com&insecure=1#🇭🇰 香港 | HKG 17
+hysteria2://203.10.99.59:20000?sni=www.bing.com&insecure=1#🇯🇵 日本 | JPN 5
+hysteria2://jp.xiongchumo.shop:21585#🇯🇵 日本 | JPN 9
+hysteria2://168.138.184.187:20000?sni=www.bing.com&insecure=1#🇸🇬 新加坡 | SGP 6
+hysteria2://th.xiongchumo.shop:21605#🇹🇭 泰国 | THA
+hysteria2://th.xiongchumo.shop:21820#🇹🇭 泰国 | THA 2
+hysteria2://th.xiongchumo.shop:21065#🇹🇭 泰国 | THA 3
+hysteria2://th.xiongchumo.shop:21850#🇹🇭 泰国 | THA 5
+hysteria2://th.xiongchumo.shop:21053#🇹🇭 泰国 | THA 6
+hysteria2://108.181.23.249:20000?sni=www.bing.com&insecure=1#🇺🇸 美国 | USA 19
+hysteria2://us.xiongchumo.shop:21370#🇺🇸 美国 | USA 22
+hysteria2://us.xiongchumo.shop:21255#🇺🇸 美国 | USA 27
+hysteria2://us.xiongchumo.shop:21757#🇺🇸 美国 | USA 28
+hysteria2://us.xiongchumo.shop:21385?sni=us.xiongchumo.shop#🇺🇸 美国 | USA 30
+hysteria2://108.181.22.153:20000?sni=www.bing.com&insecure=1#🇺🇸 美国 | USA 42
+hysteria2://192.151.146.155:20000?sni=www.bing.com&insecure=1#🇺🇸 美国 | USA 50
 hysteria2://mg2.mangshe.xyz:2056?sni=mg2.mangshe.xyz&insecure=1#美国2
 hysteria2://xjp1.mangshe.xyz:2055?sni=xjp1.mangshe.xyz&insecure=1#新加坡1
 hysteria2://jp7.dexlos.com:13778?insecure=1#JP
@@ -16,12 +23,9 @@ hysteria2://de.eyucdn.xyz:2056?sni=de.eyucdn.xyz&insecure=1#DE
 hysteria2://ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com:443?sni=ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com#🇭🇰 HK
 hysteria2://sg3.oomz.ru:30000?sni=bing.com&insecure=1#SG
 hysteria2://tw.oomz.ru:30000?sni=bing.com&insecure=1#TW
-hysteria2://206.71.158.37:36400?sni=YAPC-1.afshin.ir#r♡ya@V2rayBaaz◇⃟💜
 hysteria2://206.71.158.41:35000?sni=api.kermanshahi.org&insecure=1#telegram » mainv𝟮ray
 hysteria2://77.90.41.197:35000?sni=api.kermanshahi.org&insecure=1#telegram » mainv𝟮ray #1
 hysteria2://72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com:443?sni=72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com#telegram » mainv𝟮ray¹
-hysteria2://channel1.saghetalaie.homes:46914?sni=nalog.ru&insecure=1#telegram » mainv𝟮ray²
-hysteria2://2a01:4f9:4b:f378::1:443?sni=www.bing.com&insecure=1#telegram » mainv𝟮ray¹ #1
 hysteria2://40.233.121.211:30300?sni=www.bing.com&alpn=h3&insecure=1#🇨🇦CA_1 | ⬇️ 2.9MB/s|0%|Netflix|Disney|Youtube|Openai
 hysteria2://45.129.2.108:50850?sni=www.bing.com&insecure=1#🇷🇺RU_1 | ⬇️ 809KB/s
 hysteria2://46.17.41.217:30033?sni=www.bing.com&insecure=1#🇷🇺RU_2 | ⬇️ 2.5MB/s|33%|Youtube
@@ -29,7 +33,6 @@ hysteria2://129.153.59.124:54530?sni=www.bing.com&alpn=h3&insecure=1#🇨🇦CA_
 hysteria2://209.141.47.127:3234?insecure=1#🇺🇸US_6 | ⬇️ 4.0MB/s|Netflix|Openai|Gemini
 hysteria2://108.181.5.130:4710?sni=apple.com&insecure=1#🇺🇸US_7 | ⬇️ 939KB/s|37%|Netflix|Openai
 hysteria2://192.227.152.86:61001?sni=192-227-152-86.nip.io&insecure=1#🇺🇸US_8 | ⬇️ 893KB/s|Netflix|Disney|Openai
-hysteria2://dbR4wwHGOi@visg.556359.xyz:19500?insecure=1&sni=go.microsoft.com&obfs=salamander&obfs-password=ikjnsdakjnasfdjkn#SG2%EF%BD%9C%E5%95%86%E5%AE%BD%EF%BD%9C%E9%9D%9E%E5%B8%B8%E5%AE%89%E5%85%A8
 hysteria2://78c2bad7-f5f3-41f2-88cc-81de9d05040b@mg2.mangshe.xyz:2056?insecure=1&sni=mg2.mangshe.xyz#%E7%BE%8E%E5%9B%BD2
 hysteria2://78c2bad7-f5f3-41f2-88cc-81de9d05040b@xjp1.mangshe.xyz:2055?insecure=1&sni=xjp1.mangshe.xyz#%E6%96%B0%E5%8A%A0%E5%9D%A11
 hysteria2://95D27EEF-B7AE-4076-BA39-40FDFA3D0F61@jp7.dexlos.com:13778?insecure=1#JP
@@ -37,12 +40,9 @@ hysteria2://a084933d-0b41-4571-ae0c-7163b8c71ed1@de.eyucdn.xyz:2056?insecure=1&s
 hysteria2://a305ac08-d136-11ee-b6db-f23c91cfbbc9@ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com:443?sni=ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com#%F0%9F%87%AD%F0%9F%87%B0%20HK
 hysteria2://e7965e64-e001-4e8c-8273-39c61ff4a094@sg3.oomz.ru:30000?insecure=1&sni=bing.com#SG
 hysteria2://e7965e64-e001-4e8c-8273-39c61ff4a094@tw.oomz.ru:30000?insecure=1&sni=bing.com#TW
-hysteria2://Yet-Another-Public-Config-1@206.71.158.37:36400?sni=YAPC-1.afshin.ir&obfs=salamander&obfs-password=Yet-Another-Public-Config-1#r%E2%99%A1ya%40V2rayBaaz%E2%97%87%E2%83%9F%F0%9F%92%9C
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@206.71.158.41:35000?insecure=1&sni=api.kermanshahi.org&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi#telegram%20%C2%BB%20mainv%F0%9D%9F%AEray
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@77.90.41.197:35000?insecure=1&sni=api.kermanshahi.org&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi#telegram%20%C2%BB%20mainv%F0%9D%9F%AEray%20%231
 hysteria2://c3dc8d26-ab2b-11ec-a8bf-f23c91cfbbc9@72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com:443?insecure=0&sni=72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com#telegram%20%C2%BB%20mainv%F0%9D%9F%AEray%C2%B9
-hysteria2://freehomesvpnchannel3@channel1.saghetalaie.homes:46914?insecure=1&sni=nalog.ru&obfs=salamander&obfs-password=&O#28YB5qK!5t#U#telegram%20%C2%BB%20mainv%F0%9D%9F%AEray%C2%B2
-hysteria2://linux.do@[2a01:4f9:4b:f378::1]:443?insecure=1&sni=www.bing.com#telegram%20%C2%BB%20mainv%F0%9D%9F%AEray%C2%B9%20%231
 hysteria2://141.11.217.113:8080?sni=www.bing.com&insecure=1#🇭🇰 HK_01
 hysteria2://23.26.34.209:8080?sni=www.bing.com&insecure=1#🇯🇵 JP_13
 hysteria2://152.69.225.196:35000?sni=www.apple.com&insecure=1#🇰🇷 KR_25
