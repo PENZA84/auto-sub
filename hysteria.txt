@@ -49,7 +49,3 @@ hysteria://46.17.41.174:10469?insecure=1&peer=apple.com&auth=dongtaiwang.com&upm
 hysteria://130.61.24.219:443?mport=6000-21000&insecure=1&auth=483f8ef7-8480-490d-92fb-1fc392fb34b6&upmbps=30&downmbps=70&alpn=h3#🔒 HYSTERIA-UDP 🇩🇪 DE-130.61.24.219:443
 hysteria://51.159.226.1:14241?alpn=h3&auth=dongtaiwang.com&downmbps=100&peer=apple.com&upmbps=100#🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:14241
 hysteria://141.145.194.153:443?mport=6000-21000&insecure=1&auth=483f8ef7-8480-490d-92fb-1fc392fb34b6&upmbps=30&downmbps=70&alpn=h3#🔒 HYSTERIA-UDP 🇫🇷 FR-141.145.194.153:443
-hysteria://140.238.101.151:7228?insecure=1&peer=uk1.shiyuandian.shop&auth=ae845cbd-08fb-4346-929a-e28a6f3960a8&upmbps=100&downmbps=200&alpn=h3#ð HYSTERIA-UDP ð¬ð§ GB-140.238.101.151:7228
-hysteria://for.forcedparadise.space:105?protocol=udp&sni=for.forcedparadise.space&alpn=h3#hysteria certificate node
-hysteria://91.107.23.17:106?protocol=udp&sni=www.bing.com&alpn=h3&insecure=1#hysteria self signed node
-hysteria://5.83.129.153:20088?protocol=udp&sni=apple.com&alpn=h3&insecure=1#🔴🇩🇪[🎬🤖📺🔍]_github.com/Ruk1ng001_b650b93a
