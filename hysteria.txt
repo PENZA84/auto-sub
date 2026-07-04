@@ -38,3 +38,7 @@ hysteria://172.232.53.227:36712?upmbps=10&downmbps=50&obfs=xplus&obfsParam=qPaMU
 hysteria://173.234.25.52:20164?upmbps=50&downmbps=100&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&insecure=1&peer=bing.com&alpn=h3#%F0%9F%94%92%20HYSTERIA-UDP%20%F0%9F%87%BA%F0%9F%87%B8%20US-173.234.25.52:20164%20%F0%9F%93%A1%20PING-000.00-MS
 hysteria://109.104.152.149:48406?upmbps=11&downmbps=55&auth=xfNhrunYJ9GvDXCTktY2bIwhc1EyeyyAbiUMx1UtBOWgI4cMVB&insecure=1&peer=www.amazon.cn&alpn=h3#%F0%9F%94%92%20HYSTERIA-UDP%20%F0%9F%87%BA%F0%9F%87%B8%20US-109.104.152.149:48406%20%F0%9F%93%A1%20PING-000.00-MS
 hysteria://109.104.152.180:64502?upmbps=11&downmbps=55&auth=kxeFKpB8fhGjP7cO7NNgXYr19ZsqKQMco612ZCfXiaJrojw571&insecure=1&peer=bing.com&alpn=h3#%F0%9F%94%92%20HYSTERIA-UDP%20%F0%9F%87%BA%F0%9F%87%B8%20US-109.104.152.180:64502%20%F0%9F%93%A1%20PING-000.00-MS
+hysteria://51.158.54.46:11926/?insecure=1&peer=Telegram-IPCF.Cloud&auth=Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs&upmbps=80&downmbps=100&alpn=h3#05
+hysteria://173.234.25.52:20164/?insecure=1&peer=Telegram-IPCF.Cloud&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&upmbps=50&downmbps=100&alpn=h3#14
+hysteria://108.181.24.77:37872/?insecure=1&peer=apple.com&auth=dongtaiwang.com&upmbps=10&downmbps=50&alpn=h3#Channel
+hysteria://208.87.243.187:15823/?insecure=1&peer=apple.com&auth=dongtaiwang.com&upmbps=100&downmbps=100&alpn=h3#Channel

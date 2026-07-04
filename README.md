@@ -1,6 +1,6 @@
 # 节点订阅统计与下载
 
-📅 更新时间：2026-07-04 05:40:42 CST
+📅 更新时间：2026-07-05 05:30:43 CST
 
 ## 📊 节点统计
 ```
@@ -8,44 +8,44 @@
 ────────────────────────────────────────
 📊📊 节点订阅统计
 ────────────────────────────────────────
-📈 有效订阅: 979  条
-📉 失效订阅: 5791 条
+📈 有效订阅: 1265 条
+📉 失效订阅: 5505 条
 ────────────────────────────────────────
 📁 节点分布:
 ────────────────────────────────────────
-[SS] 有效 25641 条
-[SSR] 有效 239 条
-[VMESS] 有效 34376 条
-[VLESS] 有效 101084 条
-[TROJAN] 有效 36366 条
-[HYSTERIA] 有效 40 条
-[HYSTERIA2] 有效 1880 条
-[TUIC] 有效 76 条
+[SS] 有效 168586 条
+[SSR] 有效 283 条
+[VMESS] 有效 39023 条
+[VLESS] 有效 161784 条
+[TROJAN] 有效 36275 条
+[HYSTERIA] 有效 44 条
+[HYSTERIA2] 有效 2142 条
+[TUIC] 有效 86 条
 [WIREGUARD] 有效 2 条
 [CLASH] 有效 116 条
 ────────────────────────────────────────
-💾 合并文件: all.txt (199820 条, 已去重)
+💾 合并文件: all.txt (408341 条, 已去重)
 ────────────────────────────────────────
 ```
 
 ## 📁 有效节点文件
-- 📄 [ss.txt](ss.txt) (约 25641 个节点)
-- 📄 [ssr.txt](ssr.txt) (约 239 个节点)
-- 📄 [vmess.txt](vmess.txt) (约 34376 个节点)
-- 📄 [vless.txt](vless.txt) (约 101084 个节点)
-- 📄 [trojan.txt](trojan.txt) (约 36366 个节点)
-- 📄 [hysteria.txt](hysteria.txt) (约 40 个节点)
-- 📄 [hysteria2.txt](hysteria2.txt) (约 1880 个节点)
-- 📄 [tuic.txt](tuic.txt) (约 76 个节点)
+- 📄 [ss.txt](ss.txt) (约 168586 个节点)
+- 📄 [ssr.txt](ssr.txt) (约 283 个节点)
+- 📄 [vmess.txt](vmess.txt) (约 39023 个节点)
+- 📄 [vless.txt](vless.txt) (约 161784 个节点)
+- 📄 [trojan.txt](trojan.txt) (约 36275 个节点)
+- 📄 [hysteria.txt](hysteria.txt) (约 44 个节点)
+- 📄 [hysteria2.txt](hysteria2.txt) (约 2142 个节点)
+- 📄 [tuic.txt](tuic.txt) (约 86 个节点)
 - 📄 [wireguard.txt](wireguard.txt) (约 2 个节点)
 - 📄 [clash.txt](clash.txt) (约 116 个节点)
 
 ## ⚠️ 失效节点文件
 > 注意：失效节点文件中的链接需要手动处理
-- ❌ [expired_subscriptions.txt (5791 个失效链接)](expired_subscriptions.txt)
+- ❌ [expired_subscriptions.txt (5505 个失效链接)](expired_subscriptions.txt)
 
 ## 💾 合并文件
-- 📦 [all.txt (199820 个所有节点)](all.txt)
+- 📦 [all.txt (408341 个所有节点)](all.txt)
 
 ## 📂 其他文件
 - 📄 [active_subscriptions.txt](active_subscriptions.txt)
