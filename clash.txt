@@ -134,3 +134,10 @@ https://MTRjNjE4Y2JmYzo0ODg0YzRlZDgwQGg3NDU3Njgud2FpaHVpemhpYmlhb3dhbmcuY29tOjEx
 https://MTRjNjE4Y2JmYzo0ODg0YzRlZDgwQGg5NjEzNTkud2FpaHVpemhpYmlhb3dhbmcuY29tOjExNDQz?peer=h961359.waihuizhibiaowang.com&remark=🇯🇵日本2#🇯🇵日本2
 https://MTRjNjE4Y2JmYzo0ODg0YzRlZDgwQGg2NDk5NjAud2FpaHVpemhpYmlhb3dhbmcuY29tOjExNDQz?peer=h649960.waihuizhibiaowang.com&remark=🇯🇵日本3#🇯🇵日本3
 https://MTRjNjE4Y2JmYzo0ODg0YzRlZDgwQGg3NDU3Njgud2FpaHVpemhpYmlhb3dhbmcuY29tOjExNDQz?peer=h745768.waihuizhibiaowang.com&remark=🇯🇵日本4#🇯🇵日本4
+https://nodefree.org/dy/2024/07/20240725.yaml
+https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml
+https://raw.githubusercontent.com/pojiezhiyuanjun/freev2/master/1225clash.yml
+https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+https://cdn.jsdelivr.net/gh/learnhard-cn/free_proxy_ss@main/clash/clash.provider.yaml
+https://raw.githubusercontent.com/vveg26/get_proxy/main/dist/clash.config.yaml
